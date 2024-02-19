@@ -1,5 +1,5 @@
 ---
-description: Как самостоятельно найти проблему
+description: Как самостоятельно решить проблему
 ---
 # Самостоятельное решение проблем
 
@@ -110,3 +110,14 @@ Caused by: java.util.zip.ZipException: zip END header not found
 :::tip[Особенности Fabric]
 Fabric хранит часть данных игры в папке `.fabric` в папке игры. При возникновении подобной ошибки с Fabric рекомендуется удалить эту папку
 :::
+
+## Повреждение конфигов
+```log title="Пример лога"
+> net.minecraftforge.fml.config.ConfigFileTypeHandler$ConfigLoadingException: Failed loading config file flywheel-client.toml of type CLIENT for modid flywheel
+>   at net.minecraftforge.fml.config.ConfigFileTypeHandler.lambda$reader$1(ConfigFileTypeHandler.java:47) ~[forge:?] {re:classloading}
+>   at net.minecraftforge.fml.config.ConfigTracker.openConfig(ConfigTracker.java:90) ~[forge:?] {re:classloading}
+> Caused by: com.electronwill.nightconfig.core.io.ParsingException: Not enough data available
+>   at com.electronwill.nightconfig.core.io.ParsingException.notEnoughData(ParsingException.java:22) ~[core-3.6.3.jar:?] {}
+```
+Подобные ошибки характеризуются наличием слова "config" или "settings" в ошибке. В данном примере можно увидеть, что поломался файл настроек `flywheel-client.toml` мода `flywheel`.  
+Подобные проблемы решаются крайне просто - удалением соответствующего файла из папки `config` в папке игры, либо удалением всей папки `config` целиком - моды пересоздадут свои файлы настроек.
