@@ -18,3 +18,9 @@ sidebar_position: 1
 * **Jar-версия лаунчера**: Любая ОС с поддержкой Java 8 или новее (рекомендована Java 11 или новее)
 * **Установщик для Windows**: Windows 7 SP1 или новее
 * **Версия для Flathub**: Любой дистрибутив с поддержкой Flatpak
+:::danger[Обратите внимание!]
+Legacy Launcher не имеет поддержки Bedrock-издания Minecraft и иных игр, нежели Minecraft: Java Edition
+:::
+:::danger[Обратите внимание!]
+Legacy Launcher не имеет версии для мобильных устройств
+:::
