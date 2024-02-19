@@ -52,11 +52,6 @@ const config: Config = {
           label: 'Tutorial',
         },
         {
-          href: 'https://llaun.ch',
-          label: 'Скачать LL',
-          position: 'right',
-        },
-        {
           type: 'localeDropdown',
           position: 'right',
         },
@@ -78,15 +73,15 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Website',
+              label: 'Наш сайт',
               href: 'https://llaun.ch',
             },
             {
-              label: 'VK group',
+              label: 'Группа ВК',
               href: 'https://llaun.ch/vk',
             },
             {
-              label: 'Discord',
+              label: 'Наш Discord',
               href: 'https://llaun.ch/discord',
             },
           ],
