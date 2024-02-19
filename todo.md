@@ -2,6 +2,7 @@
 * Инструкция по установке модов
 * Инструкция по установке шейдеров
 * Инструкция по установке миров
+* Инструкция по установке сборок
 * Инструкция по переименованию версий
 * Инструкция по экспериментам
 * Инструкция для старых версий Forge
@@ -33,9 +34,15 @@
     * https://wiki.llaun.ch/guide:graphic-bugs
     * https://wiki.llaun.ch/guide:incompatible-software
     * https://wiki.llaun.ch/guide:play-to-network
+        * Как играть с друзьями бесплатно?
     * https://wiki.llaun.ch/guide:portable-client
 * ~~Политика конфиденциальности~~
     * ~~https://wiki.llaun.ch/privacy~~
     * ~~https://wiki.llaun.ch/privacy:start~~
     * ~~https://wiki.llaun.ch/privacy:diagnostic~~
     * ~~https://wiki.llaun.ch/privacy:stats~~
+* Костыли
+    * Arcania 1.3
+    * CodeChickenCore / CodeChickenLib на 1.7.10
+    * Поиск файлов игры 
+    * Краш мода Vic's Modern Warfare    
