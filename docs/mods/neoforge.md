@@ -1,3 +1,6 @@
+---
+description: Инструкция по установке NeoForge
+---
 # Установка NeoForge
 
 :::danger[Обратите внимание!]

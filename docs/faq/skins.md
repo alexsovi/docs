@@ -1,3 +1,6 @@
+---
+description: Инструкция по установке скина
+---
 # Установка скина
 ## Есть лицензия?
 1. Зайдите в [свой профиль на Minecraft.net](https://www.minecraft.net/msaprofile)

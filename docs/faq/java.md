@@ -1,3 +1,6 @@
+---
+description: Инструкция по установке Java
+---
 # Установка Java
 
 Для запуска [jar-версии](https://llaun.ch/jar), [бета-версии](https://llaun.ch/latest) Legacy Launcher и многих установщиков модов вам потребуется установить Java.
