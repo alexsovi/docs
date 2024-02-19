@@ -98,6 +98,12 @@ description: Как самостоятельно решить проблему
 ```
 На этот раз Fabric нам не может явно указать на проблемный мод, но мы можем узнать его из сообщения о причинах ошибки (`Caused by:`): `Caused by: org.spongepowered.asm.mixin.throwables.MixinApplyError: Mixin [sodium-extra.mixins.json:toasts.MixinTutorialToast from mod sodium-extra]`.  
 Мы видим, что проблемой стал мод `sodium-extra`, и после его удаления игра, скорее всего, запустится
+```log title="Пример лога"
+[:] java.lang.NoSuchFieldError: stateTicks
+[:]     at com.github.mim1q.minecells.entity.ProtectorEntity.<init>(ProtectorEntity.java:31)
+[:]     at net.minecraft.class_1299.method_5883(class_1299.java:544)
+```
+На этот раз ошибка произошла уже во время игры, и Fabric снова не может определить проблемный мод. Но нам повезло - если почитать строчки `at`, мы видим, что сбой произошел при работе мода `minecells` и его удаление, скорее всего, поможет его решить.
 
 ## Повреждение мода
 ```log title="Пример лога"
