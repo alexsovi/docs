@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Legacy Launcher Wiki',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Документация Legacy Launcher',
   favicon: 'img/favicon.ico',
   url: 'https://docs.llaun.ch',
   baseUrl: '/',
@@ -20,18 +20,16 @@ const config: Config = {
 
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       {
         docs: {
-          sidebarPath: './sidebars.ts',
-        },
-        blog: {
-          showReadingTime: true,
+          routeBasePath: '/',
         },
         theme: {
           customCss: './src/css/custom.css',
         },
-      } satisfies Preset.Options,
+        blog: false,
+      },
     ],
   ],
 
@@ -46,12 +44,6 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {
           type: 'localeDropdown',
           position: 'right',
         },
@@ -61,16 +53,24 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Документация',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Часто задаваемые вопросы',
+              to: '/faq',
+            },
+            {
+              label: 'Решение проблем',
+              to: '/troubleshooting',
+            },
+            {
+              label: 'Использование модов',
+              to: '/mods',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Сообщество',
           items: [
             {
               label: 'Наш сайт',
