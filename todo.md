@@ -5,7 +5,7 @@
 * Инструкция по установке сборок
 * Инструкция по переименованию версий
 * Инструкция по экспериментам
-* Инструкция для старых версий Forge
+* Инструкция для старых версий Forge (архив с папкой lib)
 * Инструкция по экспериментам
 * ~~Статья по "вирусам" в лаунчере~~
 * Аргументы лаунчера и портативное использование
@@ -42,7 +42,7 @@
     * ~~https://wiki.llaun.ch/privacy:diagnostic~~
     * ~~https://wiki.llaun.ch/privacy:stats~~
 * Костыли
-    * Arcania 1.3
-    * CodeChickenCore / CodeChickenLib на 1.7.10
+    * ~~Arcania 1.3~~
+    * ~~CodeChickenCore / CodeChickenLib на 1.7.10~~
     * Поиск файлов игры 
-    * Краш мода Vic's Modern Warfare    
+    * ~~Краш мода Vic's Modern Warfare~~
