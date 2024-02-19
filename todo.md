@@ -34,8 +34,8 @@
     * https://wiki.llaun.ch/guide:incompatible-software
     * https://wiki.llaun.ch/guide:play-to-network
     * https://wiki.llaun.ch/guide:portable-client
-* Политика конфиденциальности
-    * https://wiki.llaun.ch/privacy
-    * https://wiki.llaun.ch/privacy:start
-    * https://wiki.llaun.ch/privacy:diagnostic
-    * https://wiki.llaun.ch/privacy:stats
+* ~~Политика конфиденциальности~~
+    * ~~https://wiki.llaun.ch/privacy~~
+    * ~~https://wiki.llaun.ch/privacy:start~~
+    * ~~https://wiki.llaun.ch/privacy:diagnostic~~
+    * ~~https://wiki.llaun.ch/privacy:stats~~
