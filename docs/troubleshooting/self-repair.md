@@ -105,6 +105,18 @@ description: Как самостоятельно решить проблему
 ```
 На этот раз ошибка произошла уже во время игры, и Fabric снова не может определить проблемный мод. Но нам повезло - если почитать строчки `at`, мы видим, что сбой произошел при работе мода `minecells` и его удаление, скорее всего, поможет его решить.
 
+## Fabric - зависимости мода
+```log title="Пример лога"
+> net.fabricmc.loader.impl.FormattedException: Some of your mods are incompatible with the game or each other!
+> A potential solution has been determined, this may resolve your problem:
+>    - Replace mod 'Fabric Loader' (fabricloader) 0.15.7 with any version between 0.14.25 (inclusive) and 0.15- (exclusive).
+> More details:
+>    - Mod 'GoProne' (goprone) 3.1.3 requires any version between 0.14.21 (inclusive) and 0.15- (exclusive) of mod 'Fabric Loader' (fabricloader), but only the wrong version is present: 0.15.7!
+>   at net.fabricmc.loader.impl.FormattedException.ofLocalized(FormattedException.java:51) ~[fabric-loader-0.15.7.jar:?]
+```
+Вы должны установить моды, отвечающие требованиям установленных модов.  
+Например, в данном случае мод требует версию Fabric Loader `0.14.25 или новее`, но при этом `старее, чем 0.15`, из-за чего ему не подходит используемая версия `0.15.7`. Обновление мода или установка требуемой версии `fabric-loader` исправит эту проблему.
+
 ## Повреждение мода
 ```log title="Пример лога"
 Exception in thread "main" cpw.mods.niofs.union.UnionFileSystem$UncheckedIOException: java.util.zip.ZipException: zip END header not found
