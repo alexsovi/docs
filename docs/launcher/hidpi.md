@@ -2,19 +2,19 @@
 description: Поддержка HiDPI в Legacy Launcher
 ---
 # HiDPI
-:::danger[Обратите внимание!]
+:::info[Обратите внимание!]
 Legacy Launcher поддерживает HiDPI начиная с версии 1.123.0
 :::
 
 ## Windows и macOS
-:::tip[Обратите внимание!]
+:::note[Обратите внимание!]
 Для поддержки HiDPI в Windows и macOS требуется Java 11 или новее
 :::
 ![Скриншот окна лаунчера в Windows](./img/hidpi_win_ru.jpg)
 Масштаб интерфейса учитывается автоматически, начиная с Java 11.
 
 ## Linux
-:::tip[Обратите внимание!]
+:::note[Обратите внимание!]
 Для поддержки HiDPI в Linux требуется Java 11.0.12 и новее, либо Java 17 и новее
 :::
 ![Скриншот окна лаунчера в Windows](./img/hidpi_linux_ru.png)

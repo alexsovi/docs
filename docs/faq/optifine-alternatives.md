@@ -14,10 +14,10 @@ OptiFine - крайне нестабильный мод, имеющий огро
 * Entity Culling ([Forge/Fabric](https://modrinth.com/mod/entityculling)) - отключает рендер невидимых для игрока существ
 * Lithium: ([Fabric](https://modrinth.com/mod/lithium), [Forge](https://modrinth.com/mod/canary), [Forge (другой порт)](https://modrinth.com/mod/radium)) - оптимизация внутриигрового сервера
 * Phosphor ([Fabric](https://modrinth.com/mod/phosphor), [Forge](https://modrinth.com/mod/radon)) - оптимизация освещения
-    :::danger[Данный мод конфликтует со Starlight]
+    :::warning[Данный мод конфликтует со Starlight]
     :::
 * Starlight ([Fabric](https://modrinth.com/mod/starlight), [Forge](https://modrinth.com/mod/starlight-forge)) - улучшенная оптимизация освещения, но может быть несовместима с некоторыми модами
-    :::danger[Данный мод конфликтует с Phosphor]
+    :::warning[Данный мод конфликтует с Phosphor]
     :::
 * FerriteCore ([Forge/Fabric](https://modrinth.com/mod/ferrite-core)) - оптимизация использования памяти
 * VulkanMod ([Fabric](https://modrinth.com/mod/vulkanmod)) - заменяет OpenGL-рендер на реализацию через Vulkan
@@ -47,6 +47,6 @@ OptiFine - крайне нестабильный мод, имеющий огро
         Также, этот мод находится **на самой ранней стадии разработки** и **максимально нестабилен**.
         :::
 * Canvas ([Fabric/Quilt](https://modrinth.com/mod/canvas)) - альтернативный движок рендеринга для Minecraft с поддержкой шейдеров в собственном формате
-    :::danger[Обратите внимание!]
+    :::info[Обратите внимание!]
     Шейдеры для OptiFine не будут работать с Canvas. Canvas заявляет полную совместимость с Fabric API, но имеет множество проблем с совместимостью с другими модами.
     :::

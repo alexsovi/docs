@@ -2,7 +2,7 @@
 description: Проблемы с CodeChickenCore для 1.7.10
 ---
 # CodeChickenCore 1.7.10
-:::danger[В чём проблема?]
+:::note[В чём проблема?]
 CodeChickenCore пытается скачать библиотеку, которая давно удалена. 
 :::
 

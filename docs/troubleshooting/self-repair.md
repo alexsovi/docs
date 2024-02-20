@@ -25,9 +25,8 @@ description: Как самостоятельно решить проблему
 > [00:23:02] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:682]:  ... 25 more
 ```
 Посмотрите на строчку, начинающуюся на `Caused by`: в ней мы видим, что проблема в моде magnesium: `Critical injection failure: Redirector redirectGetFancyWeather()Z in magnesium.mixins.json:features.options.MixinWorldRenderer failed injection check`.  
-Скорее всего, этот мод и стал причиной ошибки. Удаление мода поможет запустить игру.
+Скорее всего, этот мод и стал причиной ошибки. Удаление мода поможет запустить игру.  
 
-:::tip[Старые версии Forge]
 Старые версии Forge рисовали таблицу со списком модов:
 ```log title="Пример лога"
 [:]     | State | ID             | Version      | Source                                    | Signature                                |
@@ -39,7 +38,6 @@ description: Как самостоятельно решить проблему
 [:]     | LCE   | xujmod         | 2.0.8        | xujmod-2.0.8.jar                          | None                                     |
 ```
 Наличие буквы `E` в столбце "State" сигнализирует об ошибке в моде. Например, в этом примере сломался `xujmod`. После удаления сломанных модов игра заработает.
-:::
 
 ## Forge - нехватка мода
 ```log title="Пример лога"

@@ -4,7 +4,7 @@ sidebar_position: 1
 # Системные требования
 
 ## Системные требования игры
-:::tip[Источник]
+:::info[Источник]
 Системные требования игры были взяты с [minecraft.net](https://www.minecraft.net/en-us/store/minecraft-deluxe-collection-pc#accordionv1-b6c8df09da-item-6176600103)
 :::
 | Системные характеристики | Минимальные                                                                       | Рекомендуемые                                                                            |
@@ -21,9 +21,9 @@ sidebar_position: 1
 * **Jar-версия лаунчера**: Любая ОС с поддержкой Java 8 или новее (рекомендована Java 11 или новее)
 * **Установщик для Windows**: Windows 7 SP1 или новее
 * **Версия для Flathub**: Любой дистрибутив Linux с поддержкой Flatpak
-:::danger[Обратите внимание!]
+:::info[Обратите внимание!]
 Legacy Launcher не имеет поддержки Bedrock-издания Minecraft и иных игр, нежели Minecraft: Java Edition
 :::
-:::danger[Обратите внимание!]
+:::info[Обратите внимание!]
 Legacy Launcher не имеет версии для мобильных устройств
 :::

@@ -53,12 +53,21 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Сообщество',
+          title: 'Ресурсы',
           items: [
             {
               label: 'Наш сайт',
               href: 'https://llaun.ch',
             },
+            {
+              label: 'Исходные коды Вики',
+              href: 'https://github.com/LegacyLauncher/docs/',
+            },
+          ],
+        },
+        {
+          title: 'Сообщество',
+          items: [
             {
               label: 'Группа ВК',
               href: 'https://llaun.ch/vk',
@@ -66,6 +75,15 @@ const config: Config = {
             {
               label: 'Наш Discord',
               href: 'https://llaun.ch/discord',
+            },
+          ],
+        },
+        {
+          title: 'Партнеры',
+          items: [
+            {
+              label: 'Система скинов Ely.by',
+              href: 'https://ely.by',
             },
           ],
         },
