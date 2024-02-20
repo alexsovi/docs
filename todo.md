@@ -46,3 +46,5 @@
     * ~~CodeChickenCore / CodeChickenLib на 1.7.10~~
     * Поиск файлов игры 
     * ~~Краш мода Vic's Modern Warfare~~
+
+* Поменять превью в opengraph с плейсхолдера
