@@ -11,7 +11,7 @@
 * ~~Аргументы лаунчера и портативное использование~~
     * ~~https://wiki.llaun.ch/guide:portable-client~~
 * Темы лаунчера и FlatLaF
-* Поддержка HiDPI
+* ~~Поддержка HiDPI~~
 * Инструкция по починке отсутствия соединения
     * https://wiki.llaun.ch/connectivity:none
     * https://wiki.llaun.ch/connectivity:some
