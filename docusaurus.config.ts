@@ -15,7 +15,7 @@ const config: Config = {
 
   i18n: {
     defaultLocale: 'ru',
-    locales: ['ru', 'en'],
+    locales: ['ru'],
   },
 
   presets: [
@@ -52,23 +52,6 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'Документация',
-          items: [
-            {
-              label: 'Часто задаваемые вопросы',
-              to: '/faq',
-            },
-            {
-              label: 'Решение проблем',
-              to: '/troubleshooting',
-            },
-            {
-              label: 'Использование модов',
-              to: '/mods',
-            },
-          ],
-        },
         {
           title: 'Сообщество',
           items: [
