@@ -2,7 +2,7 @@
 description: Поддержка HiDPI в Legacy Launcher
 ---
 # HiDPI
-:::tip[Обратите внимание!]
+:::danger[Обратите внимание!]
 Legacy Launcher поддерживает HiDPI начиная с версии 1.123.0
 :::
 
