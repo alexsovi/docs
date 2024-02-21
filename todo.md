@@ -6,8 +6,6 @@
 * Инструкция по починке отсутствия соединения
     * https://wiki.llaun.ch/connectivity:none
     * https://wiki.llaun.ch/connectivity:some
-* Сообщения об устаревании exe-версии
-    * https://wiki.llaun.ch/deprecation:launch4j
 * Сообщения об устаревании старого пребустрапа
     * найти в сообщениях пример скриншота
     * инструкция по починке MineModpacks
@@ -15,18 +13,16 @@
     * NVIDIA
     * AMD
     * Intel
+    * SDI Lite
 * Инструкции по выбору дискретной видеокарты
     * Для дискреток AMD
     * Для дискреток NVIDIA
-* Инструкция по обращению в техподдержку
-    * Discord
-    * VK
-    * Епочта
+    * Для дискреток Intel?
 * Перенос старых статей
     * https://wiki.llaun.ch/guide:graphic-bugs
     * https://wiki.llaun.ch/guide:incompatible-software
     * https://wiki.llaun.ch/guide:play-to-network
         * Как играть с друзьями бесплатно?
-* Поиск файлов игры 
+* Гайды по выбору Java в лаунчере
 
 * Поменять превью в opengraph с плейсхолдера
