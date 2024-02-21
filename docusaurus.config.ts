@@ -24,6 +24,7 @@ const config: Config = {
       {
         docs: {
           routeBasePath: '/',
+          editUrl: 'https://github.com/LegacyLauncher/docs/edit/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
