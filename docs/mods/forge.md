@@ -1,5 +1,7 @@
 ---
 description: Инструкция по установке Forge
+tags:
+  - modloader
 ---
 # Установка Forge
 

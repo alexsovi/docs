@@ -1,5 +1,7 @@
 ---
 description: Инструкция по установке NeoForge
+tags:
+  - modloader
 ---
 # Установка NeoForge
 

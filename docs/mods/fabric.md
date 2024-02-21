@@ -1,5 +1,7 @@
 ---
 description: Инструкция по установке Fabric
+tags:
+  - modloader
 ---
 # Установка Fabric
 
