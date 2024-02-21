@@ -9,9 +9,9 @@ description: Исходные коды лаунчера
 :::
 Актуальные исходные коды стабильной версии Legacy Launcher всегда доступны на нашем [сайте](https://llaun.ch/source) или его [зеркале](https://lln4.ru/source).
 
-Архив исходных кодов Legacy Launcher доступен в [этом git-репозитории](https://github.com/Nik-mmzd/ll-archive).
+Архив исходных кодов Legacy Launcher доступен в [этом git-репозитории](https://github.com/LegacyLauncher/archive).
 
-Файлы локализации лаунчера доступны в [этом git-репозитории](https://github.com/Nik-mmzd/tl-translations).
+Файлы локализации лаунчера доступны в [этом git-репозитории](https://github.com/LegacyLauncher/translations).
 :::tip
 Вы всегда можете прислать нам pull request с вашими исправлениями или поддержкой нового языка!
 :::
