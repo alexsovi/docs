@@ -47,6 +47,12 @@ const config: Config = {
           type: 'localeDropdown',
           position: 'right',
         },
+				{
+					'aria-label': 'GitHub',
+					'className': 'navbar--github-link',
+					'href': 'https://github.com/LegacyLauncher/docs',
+					'position': 'right',
+				},
       ],
     },
     footer: {
