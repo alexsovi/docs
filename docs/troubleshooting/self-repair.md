@@ -28,6 +28,27 @@ description: Как самостоятельно решить проблему
 Посмотрите на строчку, начинающуюся на `Caused by`: в ней мы видим, что проблема в моде magnesium: `Critical injection failure: Redirector redirectGetFancyWeather()Z in magnesium.mixins.json:features.options.MixinWorldRenderer failed injection check`.  
 Скорее всего, этот мод и стал причиной ошибки. Удаление мода поможет запустить игру.  
 
+Иногда проблемный мод появится не в самой строчке `Caused by`, а в одной из строчек `at` ниже:
+```log title="Пример лога"
+[:] java.lang.RuntimeException: null
+[:]     at net.minecraftforge.registries.GameData.postRegisterEvents(GameData.java:320) ~[forge-1.20.2-48.1.0-universal.jar%23185!/:?] {re:classloading}
+[:]     Suppressed: net.minecraftforge.fml.ModLoadingException: Age of Weapons - Reforged (ageofweapons) encountered an error during the common_setup event phase
+[:] §7java.lang.NoClassDefFoundError: net/minecraftforge/network/PlayMessages$SpawnEntity
+[:]         at net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:118) ~[javafmllanguage-1.20.2-48.1.0.jar%23182!/:?] {}
+[:]     Caused by: java.lang.NoClassDefFoundError: net/minecraftforge/network/PlayMessages$SpawnEntity
+// highlight-next-line
+[:]         at xxrexraptorxx.ageofweapons.registry.ModEntities.lambda$static$1(ModEntities.java:25) ~[ageofweapons-reforged-1.20.x-v.1.3.2.jar%23166!/:1.3.2] {re:classloading}
+[:]         at net.minecraftforge.registries.DeferredRegister$EventDispatcher.lambda$handleEvent$0(DeferredRegister.java:366) ~[forge-1.20.2-48.1.0-universal.jar%23185!/:?] {re:classloading,pl:eventbus:A}
+[:]     Caused by: java.lang.ClassNotFoundException: net.minecraftforge.network.PlayMessages$SpawnEntity
+[:]         at net.minecraftforge.securemodules.SecureModuleClassLoader.loadClass(SecureModuleClassLoader.java:397) ~[securemodules-2.2.3.jar:?] {}
+[:]         at java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[?:?] {}
+// highlight-next-line
+[:]         at xxrexraptorxx.ageofweapons.registry.ModEntities.lambda$static$1(ModEntities.java:25) ~[ageofweapons-reforged-1.20.x-v.1.3.2.jar%23166!/:1.3.2] {re:classloading}
+[:]         at net.minecraftforge.registries.DeferredRegister$EventDispatcher.lambda$handleEvent$0(DeferredRegister.java:366) ~[forge-1.20.2-48.1.0-universal.jar%23185!/:?] {re:classloading,pl:eventbus:A}
+
+```
+В этом примере ошибка происходит в моде `ageofweapons`, которому, вероятно, не подходит версия Forge - он не может найти (`ClassNotFoundException`) компонент Minecraft Forge (`net.minecraftforge.network.PlayMessages$SpawnEntity`)
+
 Старые версии Forge рисовали таблицу со списком модов:
 ```log title="Пример лога"
 [:]     | State | ID             | Version      | Source                                    | Signature                                |
