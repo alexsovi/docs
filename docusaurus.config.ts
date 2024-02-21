@@ -104,6 +104,7 @@ const config: Config = {
         'bash',
         'log',
         'properties',
+        'json',
       ],
     },
   } satisfies Preset.ThemeConfig,
