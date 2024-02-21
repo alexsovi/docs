@@ -105,6 +105,7 @@ const config: Config = {
         'log',
         'properties',
         'json',
+        'ini',
       ],
     },
   } satisfies Preset.ThemeConfig,
