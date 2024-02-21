@@ -32,7 +32,7 @@ description: Инструкция по установке Java
 * Arch Linux, Manjaro и подобные: `pacman -S jre-openjdk`
 
 Для запуска jar-файлов двойным кликом вам может потребоваться создать следующий файл:
-```dekstop title="/usr/share/applications/jre-openjdk.desktop"
+```ini title="/usr/share/applications/jre-openjdk.desktop"
 [Desktop Entry]
 Name=OpenJDK Default Java Runtime
 Comment=OpenJDK Default Java Runtime
