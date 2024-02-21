@@ -109,6 +109,17 @@ const config: Config = {
         'ini',
       ],
     },
+    zoom: {
+      selector: '.markdown :not(em) > img',
+      config: {
+        container: {
+          top: 72,
+          left: 0,
+          right: 0,
+          bottom: 16,
+        },
+      }
+    },
   } satisfies Preset.ThemeConfig,
   plugins: [
     [
@@ -117,6 +128,7 @@ const config: Config = {
         counterID: '96541553',
       }
     ],
+    'docusaurus-plugin-image-zoom',
   ],
 };
 
