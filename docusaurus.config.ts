@@ -11,7 +11,7 @@ const config: Config = {
   organizationName: 'LegacyLauncher',
   projectName: 'docs',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenMarkdownLinks: 'throw',
   trailingSlash: false,
 
   i18n: {
