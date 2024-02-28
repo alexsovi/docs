@@ -107,6 +107,7 @@ const config: Config = {
         'properties',
         'json',
         'ini',
+        'batch',
       ],
     },
     zoom: {

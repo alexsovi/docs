@@ -1,0 +1,8 @@
+{
+  "label": "Нужна помощь?",
+  "position": 7,
+  "link": {
+    "type": "doc",
+    "id": "support/game"
+  }
+}
