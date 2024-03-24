@@ -25,7 +25,13 @@ const config: Config = {
       {
         docs: {
           routeBasePath: '/',
-          editUrl: 'https://github.com/LegacyLauncher/docs/edit/main/',
+          editUrl: (params: { locale: string; docPath: string; }) => {
+            const root = `https://github.com/LegacyLauncher/docs/edit/main`;
+            const { locale, docPath } = params;
+            return locale === 'ru' ?
+              `${root}/docs/${docPath}`
+              : `${root}/i18n/en/docusaurus-plugin-content-docs/current/${docPath}`;
+          },
         },
         theme: {
           customCss: './src/css/custom.css',
