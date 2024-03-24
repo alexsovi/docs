@@ -1,0 +1,38 @@
+{
+  "link.title.Ресурсы": {
+    "message": "Resources",
+    "description": "The title of the footer links column with title=Ресурсы in the footer"
+  },
+  "link.title.Сообщество": {
+    "message": "Community",
+    "description": "The title of the footer links column with title=Сообщество in the footer"
+  },
+  "link.title.Партнеры": {
+    "message": "Partners",
+    "description": "The title of the footer links column with title=Партнеры in the footer"
+  },
+  "link.item.label.Наш сайт": {
+    "message": "Our website",
+    "description": "The label of footer link with label=Наш сайт linking to https://llaun.ch"
+  },
+  "link.item.label.Исходные коды Вики": {
+    "message": "Source code of this Wiki",
+    "description": "The label of footer link with label=Исходные коды Вики linking to https://github.com/LegacyLauncher/docs/"
+  },
+  "link.item.label.Группа ВК": {
+    "message": "VK",
+    "description": "The label of footer link with label=Группа ВК linking to https://llaun.ch/vk"
+  },
+  "link.item.label.Наш Discord": {
+    "message": "Discord",
+    "description": "The label of footer link with label=Наш Discord linking to https://llaun.ch/discord"
+  },
+  "link.item.label.Система скинов Ely.by": {
+    "message": "Ely.by",
+    "description": "The label of footer link with label=Система скинов Ely.by linking to https://ely.by"
+  },
+  "copyright": {
+    "message": "<p xmlns:cc=\"http://creativecommons.org/ns#\" xmlns:dct=\"http://purl.org/dc/terms/\">Text is available under the <a href=\"http://creativecommons.org/licenses/by-sa/4.0/\" target=\"_blank\" rel=\"license noopener noreferrer\" style=\"display:inline-block;\">CC BY-SA 4.0<img style=\"height:22px!important;margin-left:3px;vertical-align:text-bottom;\" src=\"https://mirrors.creativecommons.org/presskit/icons/cc.svg\"><img style=\"height:22px!important;margin-left:3px;vertical-align:text-bottom;\" src=\"https://mirrors.creativecommons.org/presskit/icons/by.svg\"><img style=\"height:22px!important;margin-left:3px;vertical-align:text-bottom;\" src=\"https://mirrors.creativecommons.org/presskit/icons/sa.svg\"></a><br/>Additional terms may apply.</p>",
+    "description": "The footer copyright"
+  }
+}
