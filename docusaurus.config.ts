@@ -16,7 +16,7 @@ const config: Config = {
 
   i18n: {
     defaultLocale: 'ru',
-    locales: ['ru'],
+    locales: ['en', 'ru'],
   },
 
   presets: [
