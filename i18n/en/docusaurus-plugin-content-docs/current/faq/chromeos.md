@@ -35,7 +35,7 @@ In this article, we will try to show how you can run Legacy Launcher for Minecra
 
 :::warning[Please note!]
 Your experience may vary from "terrible" to "acceptable," as Chrome OS devices typically have relatively weak specifications.
-[In any case, write to us](https://llaun.ch/discord) if you manage to get it working.
+[In any case, write to us](https://llaun.ch/discord/intl) if you manage to get it working.
 :::
 
 If everything works, you can restart the launcher after closing the game by entering the following command in the Terminal:
