@@ -1,0 +1,50 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.defaultSidebar.category.Часто задаваемые вопросы": {
+    "message": "FAQ",
+    "description": "The label for category Часто задаваемые вопросы in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.Часто задаваемые вопросы.link.generated-index.description": {
+    "message": "Frequently Asked Questions",
+    "description": "The generated-index page description for category Часто задаваемые вопросы in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.Решение проблем": {
+    "message": "Troubleshooting",
+    "description": "The label for category Решение проблем in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.Решение проблем.link.generated-index.description": {
+    "message": "Common problems and solutions",
+    "description": "The generated-index page description for category Решение проблем in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.Установка модификаций": {
+    "message": "Mods installation",
+    "description": "The label for category Установка модификаций in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.Специфичные для модов проблемы": {
+    "message": "Mod-specific problems",
+    "description": "The label for category Специфичные для модов проблемы in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.Специфичные для модов проблемы.link.generated-index.description": {
+    "message": "Mod-specific problems and solutions",
+    "description": "The generated-index page description for category Специфичные для модов проблемы in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.Документация по лаунчеру": {
+    "message": "Launcher Documentation",
+    "description": "The label for category Документация по лаунчеру in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.Документация по лаунчеру.link.generated-index.description": {
+    "message": "Detailed description of the Launcher features and settings",
+    "description": "The generated-index page description for category Документация по лаунчеру in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.Нужна помощь?": {
+    "message": "Need help?",
+    "description": "The label for category Нужна помощь? in sidebar defaultSidebar"
+  },
+  "sidebar.defaultSidebar.category.Политика конфиденциальности": {
+    "message": "Privacy Policy",
+    "description": "The label for category Политика конфиденциальности in sidebar defaultSidebar"
+  }
+}
