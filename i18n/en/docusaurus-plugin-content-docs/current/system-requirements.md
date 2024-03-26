@@ -3,6 +3,7 @@ sidebar_position: 1
 ---
 # System Requirements
 
+## Minecraft System Requirements {#minecraft}
 :::info[Source]
 The game's system requirements were taken from [minecraft.net](https://www.minecraft.net/en-us/store/minecraft-deluxe-collection-pc#accordionv1-b6c8df09da-item-6176600103)
 :::
@@ -17,7 +18,7 @@ The game's system requirements were taken from [minecraft.net](https://www.minec
 | Network Connection      | Required for downloading game files                                            | Required for downloading game files                                                |
 | Hard Drive Space        | from 1 GB                                                                      | from 2 GB                                                                           |
 
-## Launcher System Requirements
+## Launcher System Requirements {#launcher}
 * **Jar version of the launcher**: Any OS with Java 8 support (Java 11+ is recommended)
 * **Installer for Windows**: Windows 7 SP1 or newer
 * **Version for Flathub**: Any Linux distribution with Flatpak support
