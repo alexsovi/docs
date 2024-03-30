@@ -11,7 +11,7 @@ Before you start, ensure that your device can [run Linux applications](https://s
 
 In this article, we will try to show how you can run Legacy Launcher for Minecraft: Java Edition on supported Chrome OS devices.
 
-1. [Set up the Linux environment](https://support.google.com/chromebook/answer/9145439) on your device using the official instructions. ![Developer menu in Chrome OS](/img/chromeos_1.png) ![Installing Linux on Chrome OS](/img/chromeos_2.png)
+1. [Set up the Linux environment](https://support.google.com/chromebook/answer/9145439) on your device. ![Developer menu in Chrome OS](/img/chromeos_1.png) ![Installing Linux on Chrome OS](/img/chromeos_2.png)
 2. A Terminal window will open. ![Terminal Window](/img/chromeos_3.png)
 3. Enter the following commands to install Java and "wake up" X11:
    ```shell
@@ -35,7 +35,7 @@ In this article, we will try to show how you can run Legacy Launcher for Minecra
 
 :::warning[Please note!]
 Your experience may vary from "terrible" to "acceptable," as Chrome OS devices typically have relatively weak specifications.
-[In any case, write to us](https://llaun.ch/discord/intl) if you manage to get it working.
+[In any case, let us know](https://llaun.ch/discord/intl) if you manage to get it working.
 :::
 
 If everything works, you can restart the launcher after closing the game by entering the following command in the Terminal:
