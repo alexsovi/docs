@@ -30,7 +30,7 @@ const config: Config = {
             const { locale, docPath } = params;
             return locale === 'ru' ?
               `${root}/docs/${docPath}`
-              : `${root}/i18n/en/docusaurus-plugin-content-docs/current/${docPath}`;
+              : `${root}/i18n/${locale}/docusaurus-plugin-content-docs/current/${docPath}`;
           },
         },
         theme: {
