@@ -37,7 +37,7 @@ This page contains mods that can replace the functionality of OptiFine.
 * Entity Texture Features ([Forge/Fabric](https://modrinth.com/mod/entitytexturefeatures)) - OptiFine Custom Entity Textures and Random Entity Textures
 * Continuity ([Fabric](https://modrinth.com/mod/continuity), [Forge](https://modrinth.com/mod/connectedness)) - OptiFine Connected Textures
 
-## Шейдеры
+## Shaders
 * Iris ([Fabric](https://modrinth.com/mod/iris), [Forge](https://modrinth.com/mod/oculus)) - Sodium addon, supports shaders in OptiFine compatible format
     * Vulkanite ([Fabric](https://modrinth.com/mod/vulkanite-mod)) - Iris addon which adds support for **hardware-accelerated raytracing** in Minecraft
         :::danger[Warning!]
