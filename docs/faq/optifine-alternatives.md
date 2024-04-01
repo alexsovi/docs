@@ -5,7 +5,7 @@ description: На что заменить OptiFine?
 OptiFine - крайне нестабильный мод, имеющий огромное количество проблем с несовместимостью с другими модификациями.  
 На этой странице предоставлены моды, способные заменить функционал OptiFine.
 
-## Оптимизация
+## Оптимизация {#optimization}
 * Sodium ([Fabric/NeoForge](https://modrinth.com/mod/sodium), [Forge](https://modrinth.com/mod/embeddium)) - основной слой оптимизации рендеринга и взаимодействия с видеокартой
     * Indium ([Fabric](https://modrinth.com/mod/indium)) - слой совместимости Sodium с модами, использующими Fabric API
     * Reese's Sodium Options ([Fabric](https://modrinth.com/mod/reeses-sodium-options), [Forge](https://modrinth.com/mod/textrues-embeddium-options)) - расширенные настройки для Sodium
@@ -25,7 +25,7 @@ OptiFine - крайне нестабильный мод, имеющий огро
     Хотя этот мод способен значительно увеличить производительность игры, он [сломает все моды](https://github.com/xCollateral/VulkanMod/discussions/226), использующие OpenGL напрямую
     :::
 
-## Ресурспаки
+## Ресурспаки {#resourcepacks-featutes}
 * LambDynamicLights ([Fabric](https://modrinth.com/mod/lambdynamiclights), [Forge](https://www.curseforge.com/minecraft/mc-mods/dynamiclights-reforged)) - динамическое освещение
 * LambdaBetterGrass ([Fabric](https://modrinth.com/mod/lambdabettergrass)) - улучшенное отображение травы и снега
 * OptiGUI ([Fabric](https://modrinth.com/mod/optigui)) - поддержка модификации интерфейса ресурспаками
@@ -39,7 +39,7 @@ OptiFine - крайне нестабильный мод, имеющий огро
 
 
 
-## Шейдеры
+## Шейдеры {#shaders}
 * Iris ([Fabric](https://modrinth.com/mod/iris), [Forge](https://modrinth.com/mod/oculus)) - аддон для Sodium, поддерживает шейдеры в совместимом с OptiFine формате
     * Vulkanite ([Fabric](https://modrinth.com/mod/vulkanite-mod)) - аддон для Iris, добавляет поддержку **аппаратного рейтрейсинга** в Minecraft
         :::danger[Обратите внимание!]

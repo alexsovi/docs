@@ -5,7 +5,7 @@ description: На что заменить OptiFine?
 OptiFine is an extremely unstable mod that has a huge number of incompatibility problems with other modifications.  
 This page contains mods that can replace the functionality of OptiFine.
 
-## Optimization
+## Optimization {#optimization}
 * Sodium ([Fabric/NeoForge](https://modrinth.com/mod/sodium), [Forge](https://modrinth.com/mod/embeddium)) - the core rendering optimization level
     * Indium ([Fabric](https://modrinth.com/mod/indium)) - Sodium compatibility layer with mods using Fabric API
     * Reese's Sodium Options ([Fabric](https://modrinth.com/mod/reeses-sodium-options), [Forge](https://modrinth.com/mod/textrues-embeddium-options)) - advanced Sodium settings
@@ -25,7 +25,7 @@ This page contains mods that can replace the functionality of OptiFine.
     While this mod can greatly increase game performance, [it will break all mods](https://github.com/xCollateral/VulkanMod/discussions/226) that use OpenGL directly
     :::
 
-## Resourcepacks
+## Resourcepacks Features {#resourcepacks-featutes}
 * LambDynamicLights ([Fabric](https://modrinth.com/mod/lambdynamiclights), [Forge](https://www.curseforge.com/minecraft/mc-mods/dynamiclights-reforged)) - dynamic lighting
 * LambdaBetterGrass ([Fabric](https://modrinth.com/mod/lambdabettergrass)) - improved grass and snow visualization
 * OptiGUI ([Fabric](https://modrinth.com/mod/optigui)) - interface modification support via resourcepacks
@@ -37,7 +37,7 @@ This page contains mods that can replace the functionality of OptiFine.
 * Entity Texture Features ([Forge/Fabric](https://modrinth.com/mod/entitytexturefeatures)) - OptiFine Custom Entity Textures and Random Entity Textures
 * Continuity ([Fabric](https://modrinth.com/mod/continuity), [Forge](https://modrinth.com/mod/connectedness)) - OptiFine Connected Textures
 
-## Shaders
+## Shaders {#shaders}
 * Iris ([Fabric](https://modrinth.com/mod/iris), [Forge](https://modrinth.com/mod/oculus)) - Sodium addon, supports shaders in OptiFine compatible format
     * Vulkanite ([Fabric](https://modrinth.com/mod/vulkanite-mod)) - Iris addon which adds support for **hardware-accelerated raytracing** in Minecraft
         :::danger[Warning!]
