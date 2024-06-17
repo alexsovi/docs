@@ -55,6 +55,9 @@ This guide does not cover the use of such programs at this time. If you have the
 If you have a "public" ("external") IP address, you can try to open the world to the network by forwarding the port received by the game when opening the world to LAN.  
 This guide does not cover this method, as the necessary steps depend greatly on the model of router you are using. As a rule, you need to find the NAT or "port forwarding" settings, enter the IP address or MAC address of your computer and enter the required port numbers.
 
+### Port tunneling {#port-tunneling}
+There are some services that allows you to publish your port on one of their public IPs. You can use it to host your Minecraft world/server. Known services are [PlayIt](https://playit.gg) and [Ngrok](https://ngrok.com/)
+
 ## Free hosting {#free-hosting}
 You can try to create a public server for yourself and your friends on free hostings. Typically, free hostings are very limited in resources, so the game on such servers will be associated with discomfort and lags. Also, in most cases, you will not be able to install an interesting modpack because of the limited resources of the server. In addition, some free hosting limit the uptime, and your server will be forcibly stopped after some time after launching.  
 The list of free hosting sites we know of: [FalixNodes](https://falixnodes.net/), [Aternos](https://aternos.org/), [server.pro](https://server.pro/), [Minehut](https://minehut.com/).  
