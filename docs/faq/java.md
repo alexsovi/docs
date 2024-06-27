@@ -39,6 +39,7 @@ Comment=OpenJDK Default Java Runtime
 Keywords=java;runtime
 Exec=java -jar
 Terminal=false
+X-MultipleArgs=false
 Type=Application
 Icon=java
 MimeType=application/x-java-archive;application/java-archive;application/x-jar;
