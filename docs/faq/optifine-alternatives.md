@@ -25,7 +25,7 @@ OptiFine - крайне нестабильный мод, имеющий огро
     Хотя этот мод способен значительно увеличить производительность игры, он [сломает все моды](https://github.com/xCollateral/VulkanMod/discussions/226), использующие OpenGL напрямую
     :::
 
-## Ресурспаки {#resourcepacks-featutes}
+## Функционал для ресурспаков {#featutes}
 * LambDynamicLights ([Fabric](https://modrinth.com/mod/lambdynamiclights), [Forge](https://www.curseforge.com/minecraft/mc-mods/dynamiclights-reforged)) - динамическое освещение
 * LambdaBetterGrass ([Fabric](https://modrinth.com/mod/lambdabettergrass)) - улучшенное отображение травы и снега
 * OptiGUI ([Fabric](https://modrinth.com/mod/optigui)) - поддержка модификации интерфейса ресурспаками

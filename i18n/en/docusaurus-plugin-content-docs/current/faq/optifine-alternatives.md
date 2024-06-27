@@ -25,7 +25,7 @@ This page contains mods that can replace the functionality of OptiFine.
     While this mod can greatly increase game performance, [it will break all mods](https://github.com/xCollateral/VulkanMod/discussions/226) that use OpenGL directly
     :::
 
-## Resourcepacks Features {#resourcepacks-featutes}
+## Resourcepack Features {#featutes}
 * LambDynamicLights ([Fabric](https://modrinth.com/mod/lambdynamiclights), [Forge](https://www.curseforge.com/minecraft/mc-mods/dynamiclights-reforged)) - dynamic lighting
 * LambdaBetterGrass ([Fabric](https://modrinth.com/mod/lambdabettergrass)) - improved grass and snow visualization
 * OptiGUI ([Fabric](https://modrinth.com/mod/optigui)) - interface modification support via resourcepacks
