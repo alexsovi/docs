@@ -86,7 +86,7 @@ Sometimes mod authors end support for mods or do not release their mod for older
 Legacy Launcher provides **stable** modloader versions only. If a mod requires a different modloader version, you must install the required version of [Forge](./forge), [NeoForge](./neoforge), [Fabric](./fabric) or [Quilt](./quilt) yourself.
 
 ### Mod-specific troubleshooting {#specific}
-Some mods require special client configuration. For the most popular cases we have created [separate set of instructions](/category/mod-specific)
+Some mods require special client configuration. For the most popular cases we have created [separate set of instructions](/mod-specific)
 
 ### Nothing works! {#nothing-works}
 You can try our [self-repair guide](../troubleshooting/self-repair) or [contact technical support](../support/game).
