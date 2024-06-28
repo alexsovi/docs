@@ -17,7 +17,7 @@ This problem is relevant for any third-party version.
 Launcher needs to download files from somewhere. If the version developer did not bother to provide working file links, the launcher will not be able to download these files. **If you have such problems, please contact the version developer.**
 
 ## The cheat does not launch without `-noverify`! {#nevorifly}
-Failure to launch a version without `-noverify' indicates incorrect modifications. Such a version, even if it can be run, will be extremely unstable. **Do not use versions that require them to be run with `-noverify`, do not run normal versions of the game with this argument - this may lead to unpredictable consequences.**
+Failure to launch a version without `-noverify` indicates incorrect modifications. Such a version, even if it can be run, will be extremely unstable. **Do not use versions that require them to be run with `-noverify`, do not run normal versions of the game with this argument - this may lead to unpredictable consequences.**
 
 ## Cheat crashes while playing! {#crash}
 If you have ignored the above point and still run an obviously inoperable version with `-noverify` - it is to be expected. Even the "developer" will not be able to help you, because he obviously doesn't understand anything about Java programming.
