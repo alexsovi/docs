@@ -1,16 +1,17 @@
 ---
-description: Как самостоятельно решить проблему
+description: How to solve launch issues yourself
 ---
-# Самостоятельное решение проблем
+# Solving issues yourself
 
-Крашится игра?
-Вы можете попробовать найти причину проблемы самостоятельно.
-Для этого нажмите в окне ошибки кнопку "открыть логи" или включите в настройках лаунчера "журнал событий". Ниже мы перечислим относительно простые и распространенные проблемы запуска игры с модами.  
-**Все примеры ниже основаны на реальных обращениях наших пользователей**.
+Got a crash?
+You can try to find the cause yourself.
+Just press "Open Logs" button in error window or enable "Logger" in the launcher settings.  
+Following is a list of relatively simple to detect and common game launch issues.  
+**All examples below are based on real support requests from our users**.
 
-## Forge - ошибка мода {#forge-mod-error}
-В конце лога должен быть краш. Он выглядит как череда строчек, начинающихся на `at`:
-```log title="Пример лога"
+## Forge - mod error {#forge-mod-error}
+There should be a crash at the end of the log. It looks like a series of lines starting with `at`:
+```log title="Log example"
 > Exception in thread "main" [00:23:02] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1069]: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 > [00:23:02] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1069]:     at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:39)
 > [00:23:02] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1078]:     ... 4 more
@@ -25,11 +26,11 @@ description: Как самостоятельно решить проблему
 > [00:23:02] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:682]:  at org.spongepowered.asm.mixin.transformer.MixinTargetContext.applyInjections(MixinTargetContext.java:1362)
 > [00:23:02] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:682]:  ... 25 more
 ```
-Посмотрите на строчку, начинающуюся на `Caused by`: в ней мы видим, что проблема в моде magnesium: `Critical injection failure: Redirector redirectGetFancyWeather()Z in magnesium.mixins.json:features.options.MixinWorldRenderer failed injection check`.  
-Скорее всего, этот мод и стал причиной ошибки. Удаление мода поможет запустить игру.  
+Look at the line starting with `Caused by`: we can see that the problem is with the `magnesium` mod: `Critical injection failure: Redirector redirectGetFancyWeather()Z in magnesium.mixins.json:features.options.MixinWorldRenderer failed injection check`.  
+Most likely, this mod is the cause of the error. Uninstalling the mod will help to start the game.  
 
-Иногда проблемный мод появится не в самой строчке `Caused by`, а в одной из строчек `at` ниже:
-```log title="Пример лога"
+Sometimes the problematic mod will appear not in the `Caused by` line itself, but in one of the `at` lines below:
+```log title="Log example"
 [:] java.lang.RuntimeException: null
 [:]     at net.minecraftforge.registries.GameData.postRegisterEvents(GameData.java:320) ~[forge-1.20.2-48.1.0-universal.jar%23185!/:?] {re:classloading}
 [:]     Suppressed: net.minecraftforge.fml.ModLoadingException: Age of Weapons - Reforged (ageofweapons) encountered an error during the common_setup event phase
@@ -47,10 +48,10 @@ description: Как самостоятельно решить проблему
 [:]         at net.minecraftforge.registries.DeferredRegister$EventDispatcher.lambda$handleEvent$0(DeferredRegister.java:366) ~[forge-1.20.2-48.1.0-universal.jar%23185!/:?] {re:classloading,pl:eventbus:A}
 
 ```
-В этом примере ошибка происходит в моде `ageofweapons`, которому, вероятно, не подходит версия Forge - он не может найти (`ClassNotFoundException`) компонент Minecraft Forge (`net.minecraftforge.network.PlayMessages$SpawnEntity`)
+In this example, the error occurs in the `ageofweapons` mod, which probably doesn't support used Forge version - it can't find (`ClassNotFoundException`) the Minecraft Forge component (`net.minecraftforge.network.PlayMessages$SpawnEntity`)
 
-Старые версии Forge рисовали таблицу со списком модов:
-```log title="Пример лога"
+Older versions of Forge generated a table with a mods list:
+```log title="Log example"
 [:]     | State | ID             | Version      | Source                                    | Signature                                |
 [:]     |:----- |:-------------- |:------------ |:----------------------------------------- |:---------------------------------------- |
 [:]     | LCH   | minecraft      | 1.12.2       | minecraft.jar                             | None                                     |
@@ -60,38 +61,38 @@ description: Как самостоятельно решить проблему
 // highlight-next-line
 [:]     | LCE   | xujmod         | 2.0.8        | xujmod-2.0.8.jar                          | None                                     |
 ```
-Наличие буквы `E` в столбце "State" сигнализирует об ошибке в моде. Например, в этом примере сломался `xujmod`. После удаления сломанных модов игра заработает.
+The presence of the letter `E` in the "State" column signals an error in the mod. For example, in this example `xujmod` is broken. After removing the broken mods, the game will work.
 
-## Forge - нехватка мода {#forge-mod-dep}
-```log title="Пример лога"
+## Forge - missing mod (dependency) {#forge-mod-dep}
+```log title="Log example"
 [:] net.minecraftforge.fml.common.LoaderExceptionModCrash: Caught exception from XujMod (xujmod)
 // highlight-next-line
 [:] Caused by: java.lang.NoClassDefFoundError: blusunrize/immersiveengineering/common/items/ItemIEBase
 [:]     at net.lasernet.xuj.ModItems.init(ModItems.java:55)
 [:]     at net.lasernet.xuj.XujMod.preInit(XujMod.java:60)
 ```
-Ошибка `NoClassDefFoundError` обычно сигнализирует об отсутствующем моде. Из этой строчки мы видим, что не хватает мода `immersiveengineering`. После установки всех требуемых модов игра заработает.
-```log title="Пример лога"
+The `NoClassDefFoundError` error usually signals a missing mod. From this line we can see that the `immersiveengineering` mod is missing. After installing all required mods the game will work.
+```log title="Log example"
 > [17:01:14] [main/ERROR] [ne.mi.fm.lo.ModSorter/LOADING]: Missing or unsupported mandatory dependencies:
 // highlight-next-line
 >   Mod ID: 'valhelsia_core', Requested by: 'valhelsia_structures', Expected range: '[1.1.1,)', Actual version: '[MISSING]'
 ```
-:::tip[Подобные строки появляются **в начале** лога]
+:::tip[Such lines appear **at the beginning** of the log]
 :::
-По этой строке видно, что моду `valhelsia_structures` нужен мод `valhelsia_core` версии `1.1.1` или новее, который сейчас не установлен (`MISSING`). После установки всех требуемых модов **соответствующих версий** игра запустится.
+This line shows that the `valhelsia_structures` mod needs `valhelsia_core` mod version `1.1.1` or newer, which is not installed now (`MISSING`). After installing all required mods of **required versions** the game will start.
 
-## Forge - некорректное название мода {#forge-invalid-name}
-После перехода игры на Java 17 Forge может крашиться из-за некорректных названий модов. Не рекомендуется переименовывать моды кириллицей.
-```log title="Пример лога"
+## Forge - invalid mod name {#forge-invalid-name}
+After switching the game to Java 17 Forge may crash due to incorrect names of mods. It is not recommended to rename mods with names containing non-Latin characters.
+```log title="Log example"
 // highlight-next-line
 > Exception in thread "main" java.lang.IllegalArgumentException: 1.0-1.18+: Empty pre-release
 >   at java.base/java.lang.module.ModuleDescriptor$Version.<init>(ModuleDescriptor.java:1054)
 >   at java.base/java.lang.module.ModuleDescriptor$Version.parse(ModuleDescriptor.java:1090)
 ```
-По строке `1.0-1.18+: Empty pre-release` мы видим, что Forge не может понять строку "`1.0-1.18+`" какого-то мода. Посмотрев в папку с модами, мы находим файл `lazydfu-1.0-1.18+`. После переименования мода, например, в `lazydfu-1.0` игра заработает.
+By the line `1.0-1.18+: Empty pre-release` we can see that Forge cannot understand the line `1.0-1.18+` of some mod. Looking in the mods folder, we find the file `lazydfu-1.0-1.18+`. After renaming the mod, for example, to `lazydfu-1.0`, or uninstalling it the game will work.
 
-## Forge - дубликаты модов {#forge-duplicates}
-```log title="Пример лога"
+## Forge - duplicated mods {#forge-duplicates}
+```log title="Log example"
 > Exception in thread "main" [16:41:20] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1069]: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 > [16:41:20] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1069]:     at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:39)
 > [16:41:20] [main/INFO] [STDERR/]: [java.lang.ThreadGroup:uncaughtException:1078]: Caused by: java.lang.reflect.InvocationTargetException
@@ -100,10 +101,10 @@ description: Как самостоятельно решить проблему
 > [16:41:20] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:659]: Caused by: java.lang.ClassFormatError: Duplicate interface name "xaero/common/minimap/mcworld/IXaeroMinimapClientWorld" in class file net/minecraft/client/world/ClientWorld
 > [16:41:20] [main/INFO] [STDERR/]: [java.lang.Throwable:printStackTrace:659]:  at java.base/java.lang.ClassLoader.defineClass1(Native Method)
 ```
-Ошибка `java.lang.ClassFormatError: Duplicate interface name ... in class file ...` сигнализирует нам об установленном дважды моде. После удаления дубликата (название мода, как правило, можно выяснить из текста ошибки, для примера выше это `XaeroMinimap`) игра запустится.
+The `java.lang.ClassFormatError: Duplicate interface name ... in class file ...` signals us that a mod has been installed twice. After removing the duplicate (the name of the mod usually can be found from the error text, for the example above it is `XaeroMinimap`) the game will start.
 
-## Fabric - сломанный мод {#fabric-broken-mod}
-```log title="Пример лога"
+## Fabric - broken mod {#fabric-broken-mod}
+```log title="Log example"
 // highlight-next-line
 > java.lang.RuntimeException: Could not execute entrypoint stage 'main' due to errors, provided by 'bosses_of_mass_destruction'!
 >   at net.fabricmc.loader.impl.FabricLoaderImpl.lambda$invokeEntrypoints$2(FabricLoaderImpl.java:388)
@@ -111,8 +112,8 @@ description: Как самостоятельно решить проблему
 >       at net.barribob.maelstrom.MaelstromModKt.init(MaelstromMod.kt:46)
 
 ```
-По этому логу мы видим, что запуску игры помешал мод `bosses_of_mass_destruction`, которому, в свою очередь, помешала ошибка мода `Maelstrom`. После замены мода `Maelstrom` или удаления мода `bosses_of_mass_destruction` ошибка, скорее всего, пропадет
-```log title="Пример лога"
+In this log we can see that the `bosses_of_mass_destruction` mod prevented the game from launching, which in turn was prevented by an error in the `Maelstrom` mod. After replacing the `Maelstrom` mod or removing the `bosses_of_mass_destruction` mod, the error will most likely disappear.
+```log title="Log example"
 > java.lang.RuntimeException: Mixin transformation of net.minecraft.class_372 failed
 >   at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:427)
 > Caused by: org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
@@ -124,18 +125,18 @@ description: Как самостоятельно решить проблему
 > Caused by: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Invalid descriptor on sodium-extra.mixins.json:toasts.MixinTutorialToast from mod sodium-extra->@Inject::draw(Lnet/minecraft/class_4587;Lnet/minecraft/class_374;JLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V! Expected (Lnet/minecraft/class_332;Lnet/minecraft/class_374;JLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V but found (Lnet/minecraft/class_4587;Lnet/minecraft/class_374;JLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V [INJECT Applicator Phase -> sodium-extra.mixins.json:toasts.MixinTutorialToast from mod sodium-extra -> Apply Injections ->  -> Inject -> sodium-extra.mixins.json:toasts.MixinTutorialToast from mod sodium-extra->@Inject::draw(Lnet/minecraft/class_4587;Lnet/minecraft/class_374;JLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V]
 >   at org.spongepowered.asm.mixin.injection.callback.CallbackInjector.inject(CallbackInjector.java:567)
 ```
-На этот раз Fabric нам не может явно указать на проблемный мод, но мы можем узнать его из сообщения о причинах ошибки (`Caused by:`): `Caused by: org.spongepowered.asm.mixin.throwables.MixinApplyError: Mixin [sodium-extra.mixins.json:toasts.MixinTutorialToast from mod sodium-extra]`.  
-Мы видим, что проблемой стал мод `sodium-extra`, и после его удаления игра, скорее всего, запустится
-```log title="Пример лога"
+This time Fabric can't explicitly point us to the problematic mod, but we can recognize it from the error cause message (`Caused by:`): `Caused by: org.spongepowered.asm.mixin.throwables.MixinApplyError: Mixin [sodium-extra.mixins.json:toasts.MixinTutorialToast from mod sodium-extra]`.  
+We can see that the problem was the `sodium-extra` mod, and after removing it the game is likely to run.
+```log title="Log example"
 [:] java.lang.NoSuchFieldError: stateTicks
 // highlight-next-line
 [:]     at com.github.mim1q.minecells.entity.ProtectorEntity.<init>(ProtectorEntity.java:31)
 [:]     at net.minecraft.class_1299.method_5883(class_1299.java:544)
 ```
-На этот раз ошибка произошла уже во время игры, и Fabric снова не может определить проблемный мод. Но нам повезло - если почитать строчки `at`, мы видим, что сбой произошел при работе мода `minecells` и его удаление, скорее всего, поможет его решить.
+This time the error occurred during the game, and Fabric is again unable to detect the problematic mod. But we are lucky - if we read the `at` lines, we can see that the failure occurred when the `minecells` mod was running and removing it will most likely solve the issue.
 
-## Fabric - зависимости мода {#fabric-mod-dep}
-```log title="Пример лога"
+## Fabric - mod dependencies {#fabric-mod-dep}
+```log title="Log example"
 > net.fabricmc.loader.impl.FormattedException: Some of your mods are incompatible with the game or each other!
 > A potential solution has been determined, this may resolve your problem:
 // highlight-next-line
@@ -145,24 +146,27 @@ description: Как самостоятельно решить проблему
 >    - Mod 'GoProne' (goprone) 3.1.3 requires any version between 0.14.21 (inclusive) and 0.15- (exclusive) of mod 'Fabric Loader' (fabricloader), but only the wrong version is present: 0.15.7!
 >   at net.fabricmc.loader.impl.FormattedException.ofLocalized(FormattedException.java:51) ~[fabric-loader-0.15.7.jar:?]
 ```
-Вы должны установить моды, отвечающие требованиям установленных модов.  
-Например, в данном случае мод требует версию Fabric Loader `0.14.25 или новее`, но при этом `старее, чем 0.15`, из-за чего ему не подходит используемая версия `0.15.7`. Обновление мода или установка требуемой версии `fabric-loader` исправит эту проблему.
+You must install mods that meet the requirements of the installed mods.  
+For example, in this case a mod requires a version of Fabric Loader `0.14.25 or newer`, but is `older than 0.15`, making it unsuitable for the version `0.15.7` you are using. Updating the mod or installing the required version of `fabric-loader` will fix this problem.
 
-## Повреждение мода {#corruption-mod}
-```log title="Пример лога"
+## Mod corruption {#corruption-mod}
+```log title="Log example"
 Exception in thread "main" cpw.mods.niofs.union.UnionFileSystem$UncheckedIOException: java.util.zip.ZipException: zip END header not found
 // highlight-next-line
 Caused by: java.util.zip.ZipException: zip END header not found
     at jdk.zipfs/jdk.nio.zipfs.ZipFileSystem.findEND(ZipFileSystem.java:1315)
 
 ```
-Ошибка `java.util.zip.ZipException: zip END header not found` в логе сигнализирует о повреждении файлов игры и/или модов. Воспользуйтесь галочкой "обновить клиент", перекачайте моды с CurseForge/Modrinth
+The `java.util.zip.zip.ZipException: zip END header not found` error in the log signals that the game files and/or mods are corrupted. Use the "update client" checkbox, re-download mods from CurseForge/Modrinth.
 :::tip[Особенности Fabric]
-Fabric хранит часть данных игры в папке `.fabric` в папке игры. При возникновении подобной ошибки с Fabric рекомендуется удалить эту папку
+Fabric stores some data in the `.fabric` folder in the game folder. If a similar error occurs with Fabric, it is recommended to delete this folder
+:::
+:::danger
+The presence of such a problem signals problems with the hard disk drive. It is recommended to check the entire system for integrity
 :::
 
-## Повреждение конфигов {#corruption-config}
-```log title="Пример лога"
+## Config files corruption {#corruption-config}
+```log title="Log example"
 // highlight-next-line
 > net.minecraftforge.fml.config.ConfigFileTypeHandler$ConfigLoadingException: Failed loading config file flywheel-client.toml of type CLIENT for modid flywheel
 >   at net.minecraftforge.fml.config.ConfigFileTypeHandler.lambda$reader$1(ConfigFileTypeHandler.java:47) ~[forge:?] {re:classloading}
@@ -171,5 +175,5 @@ Fabric хранит часть данных игры в папке `.fabric` в 
 > Caused by: com.electronwill.nightconfig.core.io.ParsingException: Not enough data available
 >   at com.electronwill.nightconfig.core.io.ParsingException.notEnoughData(ParsingException.java:22) ~[core-3.6.3.jar:?] {}
 ```
-Подобные ошибки характеризуются наличием слова "config" или "settings" в ошибке. В данном примере можно увидеть, что поломался файл настроек `flywheel-client.toml` мода `flywheel`.  
-Подобные проблемы решаются крайне просто - удалением соответствующего файла из папки `config` в папке игры, либо удалением всей папки `config` целиком - моды пересоздадут свои файлы настроек.
+Such errors are usually recognized by the presence of the word "config" or "settings" in the error. In this example you can see that the `flywheel-client.toml` config file of the `flywheel` mod is broken.  
+Such problems are solved very simply - by deleting the corresponding file from the `config` folder in the game folder, or by deleting the entire `config` folder - the mods will recreate their settings files.
