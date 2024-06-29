@@ -1,4 +1,5 @@
 # TODO
+* English translation
 * Инструкция по установке шейдеров
 * Инструкция по установке миров
 * Инструкция по установке датапаков
@@ -17,6 +18,4 @@
 * Перенос старых статей
     * https://wiki.llaun.ch/guide:graphic-bugs
     * https://wiki.llaun.ch/guide:incompatible-software
-* Гайды по выбору Java в лаунчере
-
-* Поменять превью в opengraph с плейсхолдера
+    
