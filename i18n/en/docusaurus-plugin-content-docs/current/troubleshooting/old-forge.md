@@ -13,7 +13,7 @@ Old Forge versions try downloading non-existing files
     * [Forge 1.5.1](https://b2.mcarchive.net/file/mcarchive/33227b92d2c4dca78c3503b38680b099b73c46231e9f98af92ab4743d58e139f/fmllibs151.zip)
     * [Forge 1.5.2](https://b2.mcarchive.net/file/mcarchive/1bced41d9dcdac2bbc9a077910f7652c2f433323f46d16a6c129f96377520185/fmllibs152.zip)
 3. Open downloaded file and move `libs` folder to the game folder
-    :::note
+    :::warning
     Some old versions, e.g. Forge 1.5.2, may ignore game path setting and will always launch in default folder. You may need to use this folder as game folder.
     :::
 4. Launch the game
