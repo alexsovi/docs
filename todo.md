@@ -1,5 +1,5 @@
 # TODO
-* English translation
+* Improve the English translation
 * Инструкция по установке шейдеров
 * Инструкция по установке миров
 * Инструкция по установке датапаков
