@@ -31,6 +31,9 @@ Experiments are only available in Legacy Launcher 160.0 or newer
 :::note
 `zgc`, `zgc_generational`, `shenandoah`, `tenuring` and `max_xms` experiments require "optimized arguments" feature
 :::
+:::warning
+`zgc` and `shenandoah` experiments were moved to the updated "Optimized arguments" option and no more considered experimental
+:::
 * `zgc` - replaces CMS/G1 in the "optimized arguments" with ZGC. This garbage collector is quite efficient, but requires a very powerful CPU. ZGC was automatically enabled in older versions of LL on powerful PCs. Requires Java 15 or newer.
 * `zgc_generational` - enables "generations" support in ZGC, which should improve its performance. Requires Java 21 or newer and a `zgc` experiment.
 * `shenandoah` - replaces CMS/G1/ZGC in "optimized arguments" with Shenandoah. This garbage collector should be best suited for Minecraft, as it claims to provide the shortest possible RAM cleanup time. Requires Java 11 or newer.

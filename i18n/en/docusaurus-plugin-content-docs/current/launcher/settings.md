@@ -114,6 +114,24 @@ This page requires localization of screenshots. Feel free to [open PR](https://g
 * **Java settings**
     * **Path**: path to used Java executable
     * **Java arguments**: JVM (Java) arguments, e.g. `-Xmx` or `-Xms`
+    * **Optimized arguments**: in addition to specified **Java arguments** adds built-in Java optimization arguments
+        :::info
+        If selected GC does not meet usage requirements, **default** settings will be used
+        :::
+        * **Disable** - disables this feature. Not recommended unless you're using custom Minecraft arguments set.
+        * **Default** - will use G1 GC when applicable and fall back to CMS. G1 will be used for powerful PCs for Java 8 and newer, and for all PCs for Java 11 and newer. Identical to an old "Optimized arguments" checkbox.
+        * **Force G1 GC** - forces G1 GC to be used when possible. Requires Java 8 or newer.
+        * **Force Shenandoah GC** - forces Shenandoah GC to be used when possible. Requires Java 11.0.9 or newer.
+            :::note
+            Shenandoah GC may reduce game stuttering when running GC. Large RAM allocation recommended. `tenuring` experiment may improve performance even more
+            :::
+        * **Force ZGC** - forces ZGC to be used when possible. Requires Java 15 or newer and Windows 10 build 17134 or macOS/Linux.
+            :::info
+            ZGC claims to be a "revolutionary" garbage collector and does not allow stutters more that 1ms long. In theory it should be the best GC for running Minecraft
+            :::
+            :::warning
+            ZGC may cause wrong used RAM calculations in Task Manager. Also, some stuttering may occur for the first minutes of playing
+            :::
     * **Minecraft arguments**: Minecraft arguments, e.g. `--server` or `--fullscreen`
         :::tip[How do you figure out where to put the argument?]
         JVM arguments usually start with **one** hyphen.  
