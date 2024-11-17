@@ -7,6 +7,11 @@ sidebar_position: 1
 :::info[Источник]
 Системные требования игры были взяты с [minecraft.net](https://www.minecraft.net/en-us/store/minecraft-deluxe-collection-pc#accordionv1-b6c8df09da-item-6176600103)
 :::
+
+:::info[Системные требования macOS]
+Системные требования на официальном сайте [minecraft.net](https://www.minecraft.net/en-us/store/minecraft-deluxe-collection-pc#accordionv1-b6c8df09da-item-6176600103) утверждают, что для запуска Minecraft необходима macOS 10.14.5 (Mojave) и выше, но это не так.
+:::
+
 | Системные характеристики | Минимальные                                                                       | Рекомендуемые                                                                            |
 |--------------------------|-----------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
 | Операционная система     | Windows 7 или новее, macOS 10.12.6 (Sierra) или новее, Linux                      | Windows 10 или новее, macOS 10.14.5 (Mojave) или новее, Linux                            |
