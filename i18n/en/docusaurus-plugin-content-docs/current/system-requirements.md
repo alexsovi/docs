@@ -9,7 +9,7 @@ The game's system requirements were taken from [minecraft.net](https://www.minec
 :::
 
 :::info[macOS system requirements]
-The [minecraft.net](https://www.minecraft.net/en-us/store/minecraft-deluxe-collection-pc#accordionv1-b6c8df09da-item-6176600103) system requirements website states that you need macOS 10.15.5 (Mojave) and up to run Minecraft, but this is not the case.
+The [minecraft.net](https://www.minecraft.net/en-us/store/minecraft-deluxe-collection-pc#accordionv1-b6c8df09da-item-6176600103) system requirements website states that you need macOS 10.14.5 (Mojave) and up to run Minecraft, but this is not the case.
 :::
 
 | System Specifications   | Minimum                                                                        | Recommended                                                                         |
