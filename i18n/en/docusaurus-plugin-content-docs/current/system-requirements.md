@@ -18,7 +18,7 @@ The [minecraft.net](https://www.minecraft.net/en-us/store/minecraft-deluxe-colle
 | Architecture            | x64, ARM (macOS only), x86 (Windows only)                                      | x64, ARM (macOS only)                                                               |
 | RAM                     | 2 GB                                                                           | 4 GB                                                                                |
 | Processor               | Intel Core i3 3210 (3.2 GHz), AMD A8 7600 APU (3.1 GHz), Apple M1 or equivalent| Intel Core i5 4690 (3.5 GHz), AMD A10 7800 APU (3.5 GHz), Apple M1 or equivalent    |
-| Graphics Card           | Intel HD Graphics 4000, AMD Radeon R5                                          | NVIDIA GeForce 700 series, AMD Radeon Rx 200 (except integrated) with OpenGL 4.4 support |
+| Graphics Card           | Intel HD Graphics 4000, AMD Radeon R5                                          | NVIDIA GeForce 700 series, AMD Radeon RX 200 (except integrated) with OpenGL 4.4 support |
 | Network Connection      | Required for downloading game files                                            | Required for downloading game files                                                |
 | Hard Drive Space        | 1 GB                                                                           | 2 GB                                                                              |
 
