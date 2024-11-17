@@ -28,10 +28,10 @@ The [minecraft.net](https://www.minecraft.net/en-us/store/minecraft-deluxe-colle
 * **Version for Flathub**: Any Linux distribution with Flatpak support
 
 :::info[Please note!]
-The Legacy Launcher does not support the Bedrock edition of Minecraft or games other than Minecraft: Java Edition
+Legacy Launcher does not support the Bedrock edition of Minecraft or games other than Minecraft: Java Edition
 :::
 
 :::info[Please note!]
-The Legacy Launcher does not have a version for mobile devices
+Legacy Launcher does not have a version for mobile devices
 :::
 
