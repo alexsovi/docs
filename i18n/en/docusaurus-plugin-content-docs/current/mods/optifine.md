@@ -8,7 +8,7 @@ You don't have to install OptiFine manually. There are versions with pre-install
 :::danger[OptiFine Previews]
 There are preview versions of OptiFine available on the OptiFine download page. They are highly unstable and are not recommended for installation
 :::
-:::note[OptiFine downloading with less ADs]
+:::note[OptiFine downloading with less ADs(advertisements)]
 We recommend that you use the "Mirror" button instead of the "Download" so you don't see any extra ads
 :::
 
