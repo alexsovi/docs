@@ -6,7 +6,7 @@ description: Поддержка HiDPI в Legacy Launcher
 Legacy Launcher supports HiDPI since 1.123.0
 :::
 :::info
-This page requires localization of screenshots. Feel free to [open PR](https://github.com/LegacyLauncher/docs) if you want to help
+This page requires localization of screenshots. Feel free to [open a PR](https://github.com/LegacyLauncher/docs) if you want to help!
 :::
 
 ## Windows and macOS {#windows-macos}

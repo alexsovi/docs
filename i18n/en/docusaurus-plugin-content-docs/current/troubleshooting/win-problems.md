@@ -3,7 +3,7 @@ description: Got a lot of crashes while playing?
 ---
 # Solving common issues
 :::info
-This page requires localization of screenshots. Feel free to [open PR](https://github.com/LegacyLauncher/docs) if you want to help
+This page requires localization of screenshots. Feel free to [open a PR](https://github.com/LegacyLauncher/docs) if you want to help!
 :::
 
 Do you often see `EXCEPTION_ACCESS_VIOLATION` errors in the logs or Minecraft crashes with `exit code` of a bunch of numbers? Try this manual!
