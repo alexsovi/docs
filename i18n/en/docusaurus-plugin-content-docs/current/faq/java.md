@@ -59,5 +59,5 @@ If your device runs on an ARM processor (M1, M2, M3 and so on), choose the versi
 
 1. Open the [Adoptium](https://adoptium.net) website, and download the recommended version if your platform is detected correctly. ![Adoptium website](img/macinstall_01.jpg)
 2- Open the downloaded file and follow the on-screen instructions. ![Java Installer](img/macinstall_03.jpg)
-3. Done!!! The latest version of the JDK (Java) is installed on your Mac.
+3. Done! The latest version of the JDK (Java) is installed on your Mac.
 4. To install Legacy Launcher manually, [follow the instructions in this article](./mac-manual).
