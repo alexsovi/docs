@@ -22,6 +22,7 @@ The launcher adds a set of Java settings focused on smoother and more stable gam
 1. Open the Launcher settings, on the "Minecraft" tab go to Java settings
     ![Settings => Minecraft => Java/JRE => Configure...](./img/configure-button-en.png)
 2. In the window that opens, uncheck the "Also use optimized arguments" box
+   
     ![Also use optimized arguments](./img/optimized-arguments-off-en.png)
 
 ## Remove heavy graphics mods {#remove-graphics-mods}
