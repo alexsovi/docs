@@ -3,7 +3,7 @@ description: How to install Java
 ---
 # Java installation
 :::info
-This page requires localization of screenshots. Feel free to [open PR](https://github.com/LegacyLauncher/docs) if you want to help
+This page requires localization of screenshots. Feel free to [open a PR](https://github.com/LegacyLauncher/docs) if you want to help!
 :::
 
 Legacy Launcher [jar](https://llaun.ch/jar), [beta](https://llaun.ch/latest) and most modloader installers require installed Java.
