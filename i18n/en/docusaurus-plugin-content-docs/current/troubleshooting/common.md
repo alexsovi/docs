@@ -92,6 +92,7 @@ You might have installed incompatible mods. Common incompatible combinations inc
 * OptiFabric breaks compatibility with many mods. Do not use it.
 * MemoryLeakFix and NotEnoughCrashes may break after Fabric updates.
 * ModernFix breaks after Forge updates.
+* Some known workarounds for popular mods can be found [here](/mod-specific)
 
 ### Check mod loader error messages
 :::note[TODO!]
