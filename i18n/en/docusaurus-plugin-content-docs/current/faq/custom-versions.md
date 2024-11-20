@@ -1,5 +1,6 @@
 ---
 descriptions: Customizing Minecraft versions
+sidebar_position: 4
 ---
 # Version cloning
 This guide will be useful for modpack creators and players who want to keep multiple modpacks for same version using "[Subfolders](../launcher/subfolders)" feature.

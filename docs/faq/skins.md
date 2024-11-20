@@ -1,5 +1,6 @@
 ---
 description: Инструкция по установке скина
+sidebar_position: 1
 ---
 # Установка скина
 ## Есть лицензия? {#minecraft-net}

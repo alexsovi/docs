@@ -1,5 +1,6 @@
 ---
 description: How to set a skin
+sidebar_position: 1
 ---
 # Setting a skin
 ## Got Minecraft Premium account? {#minecraft-net}

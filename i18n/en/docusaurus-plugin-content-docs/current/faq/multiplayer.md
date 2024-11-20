@@ -1,5 +1,6 @@
 ---
 description: How to play with friends online?
+sidebar_position: 2
 ---
 # Multiplayer
 Minecraft is a game that you can play with your friends. So how do you do it?
