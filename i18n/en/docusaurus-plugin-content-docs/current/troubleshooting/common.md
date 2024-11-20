@@ -8,6 +8,33 @@ Step-by-step guide to solving the most popular issues
 If this guide helped you identify the cause of your issue, please do not contact our support team - we won't be able to fix the problem. Reach out to the author of the problematic mod instead!
 :::
 
+## Launcher Issues {#launcher-issues}
+
+### All Worlds, Accounts, and Versions Are Gone! {#config-reset}
+This happens when the launcher's configuration file is corrupted.  
+All your data is still where it was — the launcher is just looking for it in a different location (the default folder).  
+Go to the launcher settings and specify the correct path to the game folder.
+:::tip[How to Find the Game Folder]
+Recall the name of one of your versions or worlds and use Windows search.
+:::
+:::note
+The game folder must contain at least the `assets`, `libraries`, and `versions` folders. If you don’t see these, it’s likely not the game folder but a "[version-specific subfolder](../launcher/subfolders)."
+:::
+:::tip
+Don’t forget to restore your other [launcher settings](../launcher/settings), as the configuration file has been reset to default.
+:::
+:::warning
+We recommend checking your hard drive for errors and trying the "refresh client" option — launcher configuration file corruption is often caused by OS malfunctions or disk issues.
+:::
+
+### Launcher Takes a Long Time to Start! {#slow-launch}
+This is a known issue that we’ve been working to resolve for a while. It usually happens when one of the launcher's main mirrors is unavailable.  
+Try [this guide](./slow-launch) or use a VPN.
+
+### I Can't Launch the Launcher Without Internet! {#no-internet}
+Please save the diagnostic report — [this guide](../support/launcher) might help you, and you can send it to us later.  
+Additionally, completely disconnecting from the internet (unplugging the cable or disabling Wi-Fi) might help.
+
 ## Issues with entering the world or servers {#no-crashes}
 The game doesn't crash but shows an error when trying to enter a server or single-player world?
 
