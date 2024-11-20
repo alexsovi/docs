@@ -87,8 +87,9 @@ Perhaps you should think about using [Ely.by authorization for servers](https://
 * If you are connecting to a friend's world - you both need to use either **Minecraft Premium** accounts or **Ely.by** accounts. You can also try installing a mod that allows you to customize the world opening settings for the network.
 
 ### Connection refused: no further information {#connection-refused}
-If this problem occurs on all servers, it means that something on your PC (antivirus or firewall) is blocking the game from connecting to the servers. Try temporarily disabling antivirus and firewall or add Java to their exceptions.  
-If the problem appears only with a particular server, it is probably a problem on its side - contact the server administration for further help
+If this problem occurs on all servers, it means that something on your PC (antivirus or firewall) is blocking the game from connecting to the servers. Try temporarily disabling antivirus and firewall or add Java to their exceptions.
+In addition, this problem can be caused by some VPNs/proxy (for example, SafeIP) and GoodbyeDPI.  
+If the problem appears only with a particular server, it is probably a problem on its side - contact the server administration for further help.
 
 ### We are on the same LAN, but I can't see my friend's world! {#invisible-lan}
 Check that you can connect to other servers. If not - most likely something on your PC (antivirus or firewall) is blocking the game connection to the servers. Try to temporarily disable antivirus and firewall or add Java to their exceptions. Otherwise, you need to perform similar actions on your friend's side.
