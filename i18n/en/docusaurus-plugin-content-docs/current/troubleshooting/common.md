@@ -48,7 +48,7 @@ A common issue arises when you install mods for one version of the game or mod l
 :::note
 Carefully verify the game version. Players often confuse `1.12` with `1.12.2`, or `1.20.1` with `1.21`. **Mods are written specifically for particular game versions** and likely won't run on newer or older versions. **Be vigilant!**
 :::
-:::warn
+:::warning
 **Even if you're sure** no mods are installed, if you're launching a mod-supported version (like Forge/Fabric...), still check the mods folder!
 :::
 :::tip

@@ -9,7 +9,7 @@ This page requires localization of screenshots. Feel free to [open a PR](https:/
 This guide is for unclear crashes related to Java, specifically on Windows. We recommend first checking for [common issues](./common).
 :::
 Do you often see `EXCEPTION_ACCESS_VIOLATION` errors in the logs or Minecraft crashes with weird `exit code`? Try this manual!
-:::warn
+:::warning
 If you've been directed here, it means the cause of the error is **unknown to us**, and the issue occurred **on Java's side or in a system library**.  
 This guide contains various _potential_ solutions based on user reports.  
 If you encounter an issue and resolve it using this guide, please let us know which step helped you.  
