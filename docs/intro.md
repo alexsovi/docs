@@ -2,32 +2,32 @@
 slug: /
 sidebar_position: 1
 ---
-# Welcome!
-Welcome to the Legacy Launcher Documentation! Choose the section you're interested in from the menu on the left.
+# Добро пожаловать!
+Добро пожаловать на страницу с документацией по Legacy Launcher! Выберите интересующий вас раздел в меню слева.
 
-## Most Useful Articles
-### Game Won’t Start?
-* [Check for common issues](./troubleshooting/common) - you might not even need to contact support!
-* Review our [guides for popular mods](./mod-specific).
-* Try diagnosing the issue using our [log reading guide](./troubleshooting/self-repair).
-* Or [contact our support](./support/game).
+## Самые полезные статьи
+### Не запускается игра?
+* [Проверьте наличие типовых проблем](./troubleshooting/common) - возможно, вам даже не придется обращаться в поддержку!
+* Проверьте наши [инструкции для популярных модов](./mod-specific)
+* Попробуйте найти проблему в логах самостоятельно с нашей [инструкцией по чтению лога](./troubleshooting/self-repair)
+* Или [обратитесь в техподдержку](./support/game)
 
-### How to Install Mods?
-* [Guide for installing mods](./mods/installation).
-* [Guide for installing modpacks](./mods/modpacks).
-* [Installing mod loaders](./tags/modloader).
+### Как установить моды?
+* [Инструкция по установке модов](./mods/installation)
+* [Инструкция по установке сборок](./mods/modpacks)
+* [Установка загрузчиков модов](./tags/modloader)
 
-### How to Set Up a Skin?
-[Guide here](./faq/skins).
+### Как поставить скин?
+[Инструкция](./faq/skins)
 
-### How to Play with Friends?
-[Guide here](./faq/multiplayer).
+### Как играть с друзьями?
+[Инструкция](./faq/multiplayer)
 
-### How to Create Custom Versions for Modpacks?
-Use [version-specific subfolders](./launcher/subfolders) and [clone](./faq/custom-versions) the required version.
+### Как создать свои версии для модпаков?
+Используйте [подпапки по версиям](./launcher/subfolders) и [клонируйте](./faq/custom-versions) нужную версию
 
-### How to Install Java?
-Here’s [a guide on installing Java](./faq/java). Don’t forget to select the installed Java [in the launcher settings](./launcher/settings#java)!
+### Как установить Java?
+Вот [инструкция по установке Java](./faq/java). Не забудьте выбрать установленную Java [в настройках лаунчера](./launcher/settings#java)!
 
-### I Heard Your Launcher Supports Themes
-[Yes, it does](./launcher/customization#flatlaf)!
+### Я слышал, ваш лаунчер поддерживает темы
+[Да, это так](./launcher/customization#flatlaf)!
