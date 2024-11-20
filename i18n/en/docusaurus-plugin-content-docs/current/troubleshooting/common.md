@@ -13,7 +13,7 @@ If this guide helped you identify the cause of your issue, please do not contact
 ### All Worlds, Accounts, and Versions Are Gone! {#config-reset}
 This happens when the launcher's configuration file is corrupted.  
 All your data is still where it was — the launcher is just looking for it in a different location (the default folder).  
-Go to the launcher settings and specify the correct path to the game folder.
+Go to the [launcher settings](../launcher/settings) and specify the correct path to the game folder.
 :::tip[How to Find the Game Folder]
 Recall the name of one of your versions or worlds and use Windows search.
 :::
