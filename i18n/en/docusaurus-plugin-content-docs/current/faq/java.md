@@ -15,7 +15,7 @@ You're not required to install any Java to launch Minecraft. Legacy Launcher wil
 :::
 
 ## Windows
-1. Install Java installer from [Temurin](https://adoptium.net/temurin/releases/?package=jre) или [Oracle](https://www.java.com/download/) website
+1. Install Java installer from [Temurin](https://adoptium.net/temurin/releases/?package=jre) or [Oracle](https://www.java.com/download/) website
 2. Launch downloaded file with double-clicking it
 3. Follow instructions in the installation wizard
 4. Done!
