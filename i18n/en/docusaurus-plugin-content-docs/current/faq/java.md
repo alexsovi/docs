@@ -3,7 +3,7 @@ description: How to install Java
 ---
 # Java installation
 :::info
-This page requires localization of screenshots. Feel free to [open PR](https://github.com/LegacyLauncher/docs) if you want to help
+This page requires localization of screenshots. Feel free to [open a PR](https://github.com/LegacyLauncher/docs) if you want to help!
 :::
 
 Legacy Launcher [jar](https://llaun.ch/jar), [beta](https://llaun.ch/latest) and most modloader installers require installed Java.
@@ -15,7 +15,7 @@ You're not required to install any Java to launch Minecraft. Legacy Launcher wil
 :::
 
 ## Windows
-1. Install Java installer from [Temurin](https://adoptium.net/temurin/releases/?package=jre) или [Oracle](https://www.java.com/download/) website
+1. Install Java installer from [Temurin](https://adoptium.net/temurin/releases/?package=jre) or [Oracle](https://www.java.com/download/) website
 2. Launch downloaded file with double-clicking it
 3. Follow instructions in the installation wizard
 4. Done!
@@ -59,5 +59,5 @@ If your device runs on an ARM processor (M1, M2, M3 and so on), choose the versi
 
 1. Open the [Adoptium](https://adoptium.net) website, and download the recommended version if your platform is detected correctly. ![Adoptium website](img/macinstall_01.jpg)
 2- Open the downloaded file and follow the on-screen instructions. ![Java Installer](img/macinstall_03.jpg)
-3. Done!!! The latest version of the JDK (Java) is installed on your Mac.
+3. Done! The latest version of the JDK (Java) is installed on your Mac.
 4. To install Legacy Launcher manually, [follow the instructions in this article](./mac-manual).
