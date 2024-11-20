@@ -1,5 +1,6 @@
 ---
 description: Can't start the game? Can't log into the server or world?
+sidebar_position: 1
 ---
 # Solving Common Issues
 Step-by-step guide to solving the most popular issues

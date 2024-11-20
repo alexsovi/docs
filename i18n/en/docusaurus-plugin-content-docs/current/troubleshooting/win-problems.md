@@ -1,5 +1,6 @@
 ---
 description: Java keeps crashing during gameplay?
+sidebar_position: 2
 ---
 # Java crashes (Windows)
 :::info

@@ -1,5 +1,6 @@
 ---
 description: If the launcher hangs when checking for updates
+sidebar_position: 4
 ---
 # Launcher takes a long time to start
 

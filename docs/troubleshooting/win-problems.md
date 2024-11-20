@@ -1,5 +1,6 @@
 ---
 description: Постоянно крашится Java во время игры?
+sidebar_position: 2
 ---
 # Краши Java (Windows)
 :::note

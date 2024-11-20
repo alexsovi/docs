@@ -1,5 +1,6 @@
 ---
 description: How to solve launch issues yourself
+sidebar_position: 3
 ---
 # Solving issues yourself
 
