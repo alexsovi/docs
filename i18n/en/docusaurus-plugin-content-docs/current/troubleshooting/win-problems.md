@@ -57,7 +57,7 @@ In some cases, the game cannot start due to Windows corruption.
 4. In the opened window type `sfc /scannow` and press Enter
     ![Run command](./img/command-prompt-ru-2.png)
 5. Wait for a message that the scan is complete and **no problems** or that **all** corrupted files have been restored.
-    :::danger[Modified versions of Windows].
+    :::danger[Modified Windows versions]
     If you are using a modified version of Windows, it may have corrupted or missing some components required to both run the game and restore Windows. Reinstall Windows using the original installation image
     :::
 
