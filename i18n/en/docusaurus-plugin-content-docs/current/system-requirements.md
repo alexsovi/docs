@@ -26,6 +26,7 @@ The [minecraft.net](https://www.minecraft.net/en-us/store/minecraft-deluxe-colle
 * **Jar version of the launcher**: Any OS with Java 8 support (Java 11+ is recommended)
 * **Installer for Windows**: Windows 7 SP1 or newer
 * **Version for Flathub**: Any Linux distribution with Flatpak support
+* **Linux only**: `xdg-desktop-portal` impelentation for used Desktop Environment
 
 :::info[Please note!]
 Legacy Launcher does not support the Bedrock edition of Minecraft or games other than Minecraft: Java Edition
