@@ -2,9 +2,6 @@
 description: 'How to use "Subfolders" feature?'
 ---
 # Subfolders
-:::info
-This page requires localization of screenshots. Feel free to [open PR](https://github.com/LegacyLauncher/docs) if you want to help
-:::
 Since mods for different versions of the game and modloaders are not compatible with each other, we've added a "Subfolders" feature
 :::tip
 You can use this feature as a replacement for profiles to keep several different builds on the same version of the game at the same time. See the related [manual](../faq/custom-versions) for more details
@@ -13,13 +10,13 @@ You can use this feature as a replacement for profiles to keep several different
 ## Enabling Subfolders {#enable}
 1. Start the Legacy Launcher
 2. Click the "Advanced" button
-    ![Select the button with the three bars](./img/subfolders-0.png)
+    ![Select the button with the three bars](./img/menu-open-en.png)
 3. Select the "Launcher & game preferences" item.
-    ![Select "Launcher & game preferences"](./img/subfolders-1.png)
+    ![Select "Launcher & game preferences"](./img/preferences-button-en.png)
 4. Select the "Minecraft" tab
-    ![Click the "Minecraft" tab](./img/subfolders-2.png)
+    ![Click the "Minecraft" tab](./img/minecraft-select-en.png)
 5. Under "Directory", select the required mode
-    ![Selecting the required mode](./img/subfolders-3.png)
+    ![Selecting the required mode](./img/subfolders-en.png)
 
 ## "Subfolders" feaure modes {#modes}
 Legacy Launcher supports three modes of operation for this option.

@@ -13,15 +13,15 @@ If this guide helped you identify the cause of your issue, please do not contact
 ### All Worlds, Accounts, and Versions Are Gone! {#config-reset}
 This happens when the launcher's configuration file is corrupted.  
 All your data is still where it was — the launcher is just looking for it in a different location (the default folder).  
-Go to the [launcher settings](../launcher/settings) and specify the correct path to the game folder.
+Go to the [launcher settings](../launcher/settings.md) and specify the correct path to the game folder.
 :::tip[How to Find the Game Folder]
 Recall the name of one of your versions or worlds and use Windows search.
 :::
 :::note
-The game folder must contain at least the `assets`, `libraries`, and `versions` folders. If you don’t see these, it’s likely not the game folder but a "[version-specific subfolder](../launcher/subfolders)."
+The game folder must contain at least the `assets`, `libraries`, and `versions` folders. If you don’t see these, it’s likely not the game folder but a "[version-specific subfolder](../launcher/subfolders.md)."
 :::
 :::tip
-Don’t forget to restore your other [launcher settings](../launcher/settings), as the configuration file has been reset to default.
+Don’t forget to restore your other [launcher settings](../launcher/settings.md), as the configuration file has been reset to default.
 :::
 :::warning
 We recommend checking your hard drive for errors and trying the "refresh client" option — launcher configuration file corruption is often caused by OS malfunctions or disk issues.
@@ -29,10 +29,10 @@ We recommend checking your hard drive for errors and trying the "refresh client"
 
 ### Launcher Takes a Long Time to Start! {#slow-launch}
 This is a known issue that we’ve been working to resolve for a while. It usually happens when one of the launcher's main mirrors is unavailable.  
-Try [this guide](./slow-launch) or use a VPN.
+Try [this guide](./slow-launch.md) or use a VPN.
 
 ### I Can't Launch the Launcher Without Internet! {#no-internet}
-Please save the diagnostic report — [this guide](../support/launcher) might help you, and you can send it to us later.  
+Please save the diagnostic report — [this guide](../support/launcher.md) might help you, and you can send it to us later.  
 Additionally, completely disconnecting from the internet (unplugging the cable or disabling Wi-Fi) might help.
 
 ## Issues with entering the world or servers {#no-crashes}
@@ -80,7 +80,7 @@ Carefully verify the game version. Players often confuse `1.12` with `1.12.2`, o
 **Even if you're sure** no mods are installed, if you're launching a mod-supported version (like Forge/Fabric...), still check the mods folder!
 :::
 :::tip
-Using [version-specific subfolders](../launcher/subfolders) helps avoid such issues.
+Using [version-specific subfolders](../launcher/subfolders.md) helps avoid such issues.
 :::
 
 ### Removing duplicate mods {#remove-duplicates}
@@ -100,7 +100,7 @@ Some mods for older versions (like 1.7.10 and 1.12.2) may automatically download
 Yes, this solution is so common we've given it its own section.  
 Many mods conflict with OptiFine. The first step is to remove OptiFine (choose a version without OptiFine and delete its files from the mods folder) and see if the game launches. If you're using Fabric - **do not use OptiFine or OptiFabric!**
 :::note
-If this step didn't help, don't reinstall OptiFine. Continue troubleshooting without it. You can always try reintroducing OptiFine after identifying the problem source (but we recommend using [alternatives](../faq/optifine-alternatives)).
+If this step didn't help, don't reinstall OptiFine. Continue troubleshooting without it. You can always try reintroducing OptiFine after identifying the problem source (but we recommend using [alternatives](../faq/optifine-alternatives.md)).
 :::
 
 ### Check mods for conflicts {#mod-conflicts}
@@ -138,4 +138,4 @@ Your game files may be corrupted. Re-download them using the "Force update" chec
 Go to Java settings in your launcher. Try removing all JVM arguments entered there.
 
 ## Nothing helps? {#support}
-[Contact our support team](../support/game) or try [self-repair guide](./self-repair).
+[Contact our support team](../support/game.mdx) or try [self-repair guide](./self-repair.md).
