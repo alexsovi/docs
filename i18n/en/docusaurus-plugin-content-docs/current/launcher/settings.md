@@ -8,7 +8,7 @@ This page requires localization of screenshots. Feel free to [open PR](https://g
 
 ## How do I access the launcher preferences? {#accessing}
 1. Click the "Preferences" button (one with three stripes)
-    ![Preferences button](./img/open-settings-1.png)
+    ![Preferences button](./img/menu-open-en.png)
 2. Select the "Launcher & game preferences" item
     ![Launcher & game preferences](./img/open-settings-2.png)
 
