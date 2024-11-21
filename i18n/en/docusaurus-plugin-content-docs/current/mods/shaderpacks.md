@@ -4,7 +4,7 @@ tags:
   - shaders
 ---
 
-# Shaderpacks installation
+# Shaderpacks installation for Fabric and NeoForge
 
 :::note
 Shaderpacks might be referred to as shaders in the following guide.
