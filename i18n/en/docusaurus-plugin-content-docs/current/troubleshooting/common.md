@@ -138,4 +138,4 @@ Your game files may be corrupted. Re-download them using the "Force update" chec
 Go to Java settings in your launcher. Try removing all JVM arguments entered there.
 
 ## Nothing helps? {#support}
-[Contact our support team](../support/game.md) or try [self-repair guide](./self-repairmd).
+[Contact our support team](../support/game.md) or try [self-repair guide](./self-repair.md).
