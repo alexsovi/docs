@@ -120,7 +120,7 @@ You might have installed incompatible mods. Common incompatible combinations inc
 * OptiFabric breaks compatibility with many mods. Do not use it.
 * MemoryLeakFix and NotEnoughCrashes may break after Fabric updates.
 * ModernFix breaks after Forge updates.
-* Some known workarounds for popular mods can be found [here](/mod-specific.md)
+* Some known workarounds for popular mods can be found [here](/mod-specific)
 
 ### Check mod loader error messages
 :::note[TODO!]
@@ -138,4 +138,4 @@ Your game files may be corrupted. Re-download them using the "Force update" chec
 Go to Java settings in your launcher. Try removing all JVM arguments entered there.
 
 ## Nothing helps? {#support}
-[Contact our support team](../support/game.md) or try [self-repair guide](./self-repairmd).
+[Contact our support team](../support/game.mdx) or try [self-repair guide](./self-repair.md).

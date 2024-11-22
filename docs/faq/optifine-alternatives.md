@@ -1,6 +1,6 @@
 ---
 description: На что заменить OptiFine?
-sidebar_position: 3
+sidebar_position: 4
 ---
 # Альтернативы OptiFine
 OptiFine - крайне нестабильный мод, имеющий огромное количество проблем с несовместимостью с другими модификациями.  

@@ -17,6 +17,9 @@ Welcome to the Legacy Launcher Documentation! Choose the section you're interest
 * [Guide for installing modpacks](./mods/modpacks).
 * [Installing mod loaders](./tags/modloader).
 
+### How to Install Shaders?
+[Guide here](./faq/shaders)
+
 ### How to Set Up a Skin?
 [Guide here](./faq/skins).
 
