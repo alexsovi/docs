@@ -10,13 +10,13 @@ You can use this feature as a replacement for profiles to keep several different
 ## Enabling Subfolders {#enable}
 1. Start the Legacy Launcher
 2. Click the "Advanced" button
-    ![Select the button with the three bars](./img/menu-open-en.png)
+    ![Select the button with the three bars](./img/menu-open.png)
 3. Select the "Launcher & game preferences" item.
-    ![Select "Launcher & game preferences"](./img/preferences-button-en.png)
+    ![Select "Launcher & game preferences"](./img/preferences-button.png)
 4. Select the "Minecraft" tab
-    ![Click the "Minecraft" tab](./img/minecraft-select-en.png)
+    ![Click the "Minecraft" tab](./img/minecraft-select.png)
 5. Under "Directory", select the required mode
-    ![Selecting the required mode](./img/subfolders-en.png)
+    ![Selecting the required mode](./img/subfolders.png)
 
 ## "Subfolders" feaure modes {#modes}
 Legacy Launcher supports three modes of operation for this option.

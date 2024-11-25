@@ -13,14 +13,14 @@ This page requires localization of screenshots. Feel free to [open a PR](https:/
 :::note
 HiDPI support requires Java 11 or newer
 :::
-![Launcher window in Windows](./img/hidpi_win_ru.jpg)
+![Launcher window in Windows](./img/hidpi_win.jpg)
 The interface scale is respected automatically starting with Java 11.
 
 ## Linux {#linux}
 :::note
 Linux HiDPI support requires Java 11.0.12 and later, or Java 17 and later
 :::
-![Launcher window in Linux](./img/hidpi_linux_ru.png)
+![Launcher window in Linux](./img/hidpi_linux.png)
 The launcher was tested in GNOME 40 environment with GTKLookAndFeel on AdoptOpenJDK 11.0.12.
 
 If the launcher is running with a regular L&F and/or no scaling, it can be started like this:

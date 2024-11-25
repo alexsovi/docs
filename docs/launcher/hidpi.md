@@ -10,14 +10,14 @@ Legacy Launcher поддерживает HiDPI начиная с версии 1.
 :::note[Обратите внимание!]
 Для поддержки HiDPI в Windows и macOS требуется Java 11 или новее
 :::
-![Скриншот окна лаунчера в Windows](./img/hidpi_win_ru.jpg)
+![Скриншот окна лаунчера в Windows](./img/hidpi_win.jpg)
 Масштаб интерфейса учитывается автоматически, начиная с Java 11.
 
 ## Linux {#linux}
 :::note[Обратите внимание!]
 Для поддержки HiDPI в Linux требуется Java 11.0.12 и новее, либо Java 17 и новее
 :::
-![Скриншот окна лаунчера в Windows](./img/hidpi_linux_ru.png)
+![Скриншот окна лаунчера в Windows](./img/hidpi_linux.png)
 Лаунчер тестировался в среде GNOME 40 с GTKLookAndFeel на AdoptOpenJDK 11.0.12.
 
 Если лаунчер запускается с обычным L&F и/или без масштабирования, его можно запустить так:

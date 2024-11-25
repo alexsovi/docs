@@ -5,9 +5,9 @@ description: Detailed description of all launcher preferences
 
 ## How do I access the launcher preferences? {#accessing}
 1. Click the "Preferences" button (one with three stripes)
-    ![Preferences button](./img/menu-open-en.png)
+    ![Preferences button](./img/menu-open.png)
 2. Select the "Launcher & game preferences" item
-    ![Launcher & game preferences](./img/preferences-button-en.png)
+    ![Launcher & game preferences](./img/preferences-button.png)
 
 ## Preferences description {#description}
 ### "Minecraft" tab {#minecraft}
