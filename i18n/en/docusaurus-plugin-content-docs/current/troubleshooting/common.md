@@ -35,6 +35,10 @@ Try [this guide](./slow-launch.md) or use a VPN.
 Please save the diagnostic report — [this guide](../support/launcher.md) might help you, and you can send it to us later.  
 Additionally, completely disconnecting from the internet (unplugging the cable or disabling Wi-Fi) might help.
 
+### I Can't Install New versions! {#no-versions}
+Check launcher preferences and make sure the "Remote from server" checkbox is **enabled** and "Installed only" is **disabled**
+Убедитесь, что в настройках лаунчера **включена** галочка "Загружать с сервера" и отключена галочка "Только установленные"
+
 ## Issues with entering the world or servers {#no-crashes}
 The game doesn't crash but shows an error when trying to enter a server or single-player world?
 
@@ -82,6 +86,9 @@ Carefully verify the game version. Players often confuse `1.12` with `1.12.2`, o
 :::tip
 Using [version-specific subfolders](../launcher/subfolders.md) helps avoid such issues.
 :::
+
+### Check selected java version {#check-java-version}
+Most Minecraft versions require specific Java version. Make sure to try launching minecraft using "Recommended" Java setting in the launcher preferences
 
 ### Removing duplicate mods {#remove-duplicates}
 Most mod loaders fail when encountering multiple versions of the same mod. Ensure each mod is installed only once.  
