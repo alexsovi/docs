@@ -10,6 +10,79 @@ Just press "Open Logs" button in error window or enable "Logger" in the launcher
 Following is a list of relatively simple to detect and common game launch issues.  
 **All examples below are based on real support requests from our users**.
 
+## Wrong Java version {#wrong-java}
+Detected by `java.lang.UnsupportedClassVersionError` in `caused by` string.
+```log title="Log example"
+> Exception in thread "main" java.util.ServiceConfigurationError: net.minecraftforge.forgespi.language.IModLanguageProvider: Unable to load thedarkcolour.kotlinforforge.KotlinLanguageProvider
+>   at java.base/java.util.ServiceLoader.fail(ServiceLoader.java:586)
+// highlight-next-line
+> Caused by: java.lang.UnsupportedClassVersionError: thedarkcolour/kotlinforforge/KotlinLanguageProvider has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0
+>   at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+```
+In this example, it is clear that the mod `kotlinforforge` failed to load because it is being run on an outdated version of Java. The required Java version can be determined by the `class file version`, using [this website](https://javaalmanac.io/bytecode/versions/). In this example, the game was launched with Java 17 (61.0), but the mod requires Java 21 (65.0).
+
+```log title="Log example"
+> Error: LinkageError occurred while loading main class net.minecraft.client.main.Main
+// highlight-next-line
+>   java.lang.UnsupportedClassVersionError: net/minecraft/client/main/Main has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0
+```
+This same error is typical when launching the game itself with an incompatible (too old) version of Java. This error can also be identified by the keyword `UnsupportedClassVersionError`.
+
+Older versions of the game use the so-called `launchwrapper`, which does not work with Java 9 or newer. Such versions will crash with the following log when launched on newer Java versions:
+```log title="Log example"
+// highlight-next-line
+> Exception in thread "main" java.lang.ClassCastException: class jdk.internal.loader.ClassLoaders$AppClassLoader cannot be cast to class java.net.URLClassLoader (jdk.internal.loader.ClassLoaders$AppClassLoader and java.net.URLClassLoader are in module java.base of loader 'bootstrap')
+>   at net.minecraft.launchwrapper.Launch.<init>(Launch.java:33)
+>   at net.minecraft.launchwrapper.Launch.main(Launch.java:27)
+
+```
+The solution is to run the game using Java 8 (often selecting the "recommended" Java version will help).
+
+## Java VM Crash {#jvm-crash}
+Sometimes it's not the game that crashes, but the Java Virtual Machine itself:
+```log title="Log example"
+[:] #
+[:] # A fatal error has been detected by the Java Runtime Environment:
+[:] #
+// highlight-next-line
+[:] #  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff91b3cfdf8, pid=17192, tid=27840
+[:] #
+[:] # JRE version: OpenJDK Runtime Environment Microsoft-22300 (16.0.1+9) (build 16.0.1+9)
+[:] # Java VM: OpenJDK 64-Bit Server VM Microsoft-22300 (16.0.1+9, mixed mode, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+// highlight-next-line
+[:] # Problematic frame:
+// highlight-next-line
+[:] # V  [jvm.dll+0x69fdf8]
+[:] #
+[:] # No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+[:] #
+[:] # If you would like to submit a bug report, please visit:
+[:] #   https://github.com/microsoft/openjdk/issues
+[:] #
+```
+In such logs, there are two key points: the error (in the example above, it's `EXCEPTION_ACCESS_VIOLATION`) and the library where the error occurred (`jvm.dll`).
+Typical solutions involve tracking down which component the error is related to and removing it (if it's third-party software, such as SafeIP), or updating/rolling back (if it's Java or a graphics driver).
+Unfortunately, these errors are often non-trivial to fix, and even we might not be able to help. Try Googling, or contact the support of the component's manufacturer (e.g., the graphics driver).
+:::danger
+Never attempt to manually delete or replace the problematic dll file! You could make the problem worse or break your OS!
+:::
+:::tip
+You can _try_ to resolve this issue using [this guide](./self-repair)
+:::
+
+## OptiFine - incompatible Forge version {#optifine-incompatible-forge}
+OptiFine is a rather finicky mod that requires specific Forge versions.
+```log title="Log example"
+> [11:43:13] [main/ERROR] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Service failed to load OptiFine
+> cpw.mods.modlauncher.api.IncompatibleEnvironmentException: Error loading OptiFine ZIP file: union:/C:/Users/Makc/AppData/Roaming/.tlauncher/legacy/Minecraft/game/mods/OptiFine_1.21.1_HD_U_J1.jar%23159!/
+>   at optifine.OptiFineTransformationService.onLoad(OptiFineTransformationService.java:122) ~[?:?] {}
+// highlight-next-line
+> [11:43:13] [main/ERROR] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Found 1 services that failed to load : [OptiFine]
+// highlight-next-line
+> Exception in thread "main" cpw.mods.modlauncher.InvalidLauncherSetupException: Invalid Services found OptiFine
+```
+From the lines `services that failed to load: [OptiFine]` and `Invalid Services found OptiFine`, we can see that the current versions of OptiFine and Forge are incompatible.
+
 ## Forge - mod error {#forge-mod-error}
 There should be a crash at the end of the log. It looks like a series of lines starting with `at`:
 ```log title="Log example"
@@ -91,6 +164,16 @@ After switching the game to Java 17 Forge may crash due to incorrect names of mo
 >   at java.base/java.lang.module.ModuleDescriptor$Version.parse(ModuleDescriptor.java:1090)
 ```
 By the line `1.0-1.18+: Empty pre-release` we can see that Forge cannot understand the line `1.0-1.18+` of some mod. Looking in the mods folder, we find the file `lazydfu-1.0-1.18+`. After renaming the mod, for example, to `lazydfu-1.0`, or uninstalling it the game will work.
+
+In newer versions of the game, there is another case:
+```log title="Log example"
+> Exception in thread "main" java.lang.IllegalArgumentException: multi-piston: Invalid module name: 'multi-piston' is not a Java identifier
+>   at java.base/jdk.internal.module.Checks.requireModuleName(Checks.java:59)
+```
+The `IllegalArgumentException` with the comment `Invalid module name` indicates an invalid module name for the mod. This usually points to one of two things: either the mod is broken, or the mod is being loaded with the wrong version of the game. There's also a chance the issue lies in the mod's filename – in this case, you could try renaming the mod (for this example - from `multi-piston` to `multipiston`)
+:::warning
+Do not rename mods using non-latin characters! Some Forge versions will assign empty module names to such mods, causing them to break!
+:::
 
 ## Forge - duplicated mods {#forge-duplicates}
 ```log title="Log example"

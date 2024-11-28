@@ -9,6 +9,79 @@ sidebar_position: 3
 Для этого нажмите в окне ошибки кнопку "открыть логи" или включите в настройках лаунчера "журнал событий". Ниже мы перечислим относительно простые и распространенные проблемы запуска игры с модами.  
 **Все примеры ниже основаны на реальных обращениях наших пользователей**.
 
+## Неправильная версия Java {#wrong-java}
+В строке `caused by` будет ошибка `java.lang.UnsupportedClassVersionError`
+```log title="Пример лога"
+> Exception in thread "main" java.util.ServiceConfigurationError: net.minecraftforge.forgespi.language.IModLanguageProvider: Unable to load thedarkcolour.kotlinforforge.KotlinLanguageProvider
+>   at java.base/java.util.ServiceLoader.fail(ServiceLoader.java:586)
+// highlight-next-line
+> Caused by: java.lang.UnsupportedClassVersionError: thedarkcolour/kotlinforforge/KotlinLanguageProvider has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0
+>   at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+```
+В данном примере видно, что мод `kotlinforforge` не смог загрузиться, т.к. запускается со слишком старой Java. Требуемую версию Java можно определить по `class file version`, используя [этот сайт](https://javaalmanac.io/bytecode/versions/). Для данного примера игра была запущена на Java 17 (61.0), а мод требует Java 21 (65.0)
+
+```log title="Пример лога"
+> Error: LinkageError occurred while loading main class net.minecraft.client.main.Main
+// highlight-next-line
+>   java.lang.UnsupportedClassVersionError: net/minecraft/client/main/Main has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0
+```
+Эта же ошибка характерна для запуска самой игры с несовместимой (слишком старой) версией Java. Эта ошибка также определяется по ключевому слову `UnsupportedClassVersionError`
+
+Старые версии игры используют т.н. `launchwrapper`, который не работает с Java 9 или новее. Подобные версии будут вылетать со следующим логом при запуске на слишком новых версиях игры:
+```log title="Пример лога"
+// highlight-next-line
+> Exception in thread "main" java.lang.ClassCastException: class jdk.internal.loader.ClassLoaders$AppClassLoader cannot be cast to class java.net.URLClassLoader (jdk.internal.loader.ClassLoaders$AppClassLoader and java.net.URLClassLoader are in module java.base of loader 'bootstrap')
+>   at net.minecraft.launchwrapper.Launch.<init>(Launch.java:33)
+>   at net.minecraft.launchwrapper.Launch.main(Launch.java:27)
+
+```
+Решение - запуск игры на Java 8 (зачастую поможет выбор "рекомендованной" версии Java)
+
+## Краш Java {#jvm-crash}
+Иногда такое бывает, что крашится не игра, а сама виртуальная машина Java
+```log title="Пример лога"
+[:] #
+[:] # A fatal error has been detected by the Java Runtime Environment:
+[:] #
+// highlight-next-line
+[:] #  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff91b3cfdf8, pid=17192, tid=27840
+[:] #
+[:] # JRE version: OpenJDK Runtime Environment Microsoft-22300 (16.0.1+9) (build 16.0.1+9)
+[:] # Java VM: OpenJDK 64-Bit Server VM Microsoft-22300 (16.0.1+9, mixed mode, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+// highlight-next-line
+[:] # Problematic frame:
+// highlight-next-line
+[:] # V  [jvm.dll+0x69fdf8]
+[:] #
+[:] # No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+[:] #
+[:] # If you would like to submit a bug report, please visit:
+[:] #   https://github.com/microsoft/openjdk/issues
+[:] #
+```
+В подобных логах два ключевых момента: ошибка (в примере выше это `EXCEPTION_ACCESS_VIOLATION`) и библиотека, в которой произошла эта ошибка (`jvm.dll`).  
+Типичные способы решения - отследить, к какому компоненту относится ошибка, и удалить его (если это стороннее ПО, например, SafeIP), либо обновить/откатить (если это Java или драйвер видеокарты).  
+К сожалению, эти ошибки слишком нетривиальны для решения и помочь с ними зачастую не можем даже мы. Гуглите, обращайтесь в поддержку производителя компонента (например, видеодрайвера).
+:::danger
+Ни в коем случае не пытайтесь вручную удалить или заменить проблемный dll-файл! Вы можете усугубить проблему или сломать вашу ОС!
+:::
+:::tip
+Вы можете _попробовать_ решить данную проблему с помощью [этой инструкции](./self-repair)
+:::
+
+## OptiFine - несовместимая версия Forge {#optifine-incompatible-forge}
+OptiFine - довольно капризный мод, требующий конкретные версии Forge.
+```log title="Пример лога"
+> [11:43:13] [main/ERROR] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Service failed to load OptiFine
+> cpw.mods.modlauncher.api.IncompatibleEnvironmentException: Error loading OptiFine ZIP file: union:/C:/Users/Makc/AppData/Roaming/.tlauncher/legacy/Minecraft/game/mods/OptiFine_1.21.1_HD_U_J1.jar%23159!/
+>   at optifine.OptiFineTransformationService.onLoad(OptiFineTransformationService.java:122) ~[?:?] {}
+// highlight-next-line
+> [11:43:13] [main/ERROR] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Found 1 services that failed to load : [OptiFine]
+// highlight-next-line
+> Exception in thread "main" cpw.mods.modlauncher.InvalidLauncherSetupException: Invalid Services found OptiFine
+```
+По строкам `services that failed to load : [OptiFine]` и `Invalid Services found OptiFine` мы видим, что текущие версии OptiFine и Forge несовместимы
+
 ## Forge - ошибка мода {#forge-mod-error}
 В конце лога должен быть краш. Он выглядит как череда строчек, начинающихся на `at`:
 ```log title="Пример лога"
@@ -46,7 +119,6 @@ sidebar_position: 3
 // highlight-next-line
 [:]         at xxrexraptorxx.ageofweapons.registry.ModEntities.lambda$static$1(ModEntities.java:25) ~[ageofweapons-reforged-1.20.x-v.1.3.2.jar%23166!/:1.3.2] {re:classloading}
 [:]         at net.minecraftforge.registries.DeferredRegister$EventDispatcher.lambda$handleEvent$0(DeferredRegister.java:366) ~[forge-1.20.2-48.1.0-universal.jar%23185!/:?] {re:classloading,pl:eventbus:A}
-
 ```
 В этом примере ошибка происходит в моде `ageofweapons`, которому, вероятно, не подходит версия Forge - он не может найти (`ClassNotFoundException`) компонент Minecraft Forge (`net.minecraftforge.network.PlayMessages$SpawnEntity`)
 
@@ -90,6 +162,16 @@ sidebar_position: 3
 >   at java.base/java.lang.module.ModuleDescriptor$Version.parse(ModuleDescriptor.java:1090)
 ```
 По строке `1.0-1.18+: Empty pre-release` мы видим, что Forge не может понять строку "`1.0-1.18+`" какого-то мода. Посмотрев в папку с модами, мы находим файл `lazydfu-1.0-1.18+`. После переименования мода, например, в `lazydfu-1.0` игра заработает.
+
+На новых версиях игры есть и другой случай:
+```log title="Пример лога"
+> Exception in thread "main" java.lang.IllegalArgumentException: multi-piston: Invalid module name: 'multi-piston' is not a Java identifier
+>   at java.base/jdk.internal.module.Checks.requireModuleName(Checks.java:59)
+```
+`IllegalArgumentException` с комментарием `Invalid module name` говорит нам о недопустимом названии модуля для мода. Обычно это сигнализирует об одной из двух вещах: мод сломан или загружается мод для неправильной версии игры. Также есть шанс, что проблема в имени файла мода - в данном примере можно попробовать переименовать мод (для данного примера - переименовать мод `multi-piston` в `multipiston`)
+:::warning
+Не переименовывайте моды кириллицей! Некоторые версии Forge будут назначать таким модам пустые имена модулей и ломаться!
+:::
 
 ## Forge - дубликаты модов {#forge-duplicates}
 ```log title="Пример лога"
