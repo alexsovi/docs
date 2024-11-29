@@ -82,6 +82,19 @@ OptiFine - довольно капризный мод, требующий кон
 ```
 По строкам `services that failed to load : [OptiFine]` и `Invalid Services found OptiFine` мы видим, что текущие версии OptiFine и Forge несовместимы
 
+## OptiFine - несовместимая версия игры {#optifine-version}
+OptiFine максимально жестко привязан к версии игры. Если многие моды могут пережить незначительное обновление (например, моды для 1.19.1 могут заработать на 1.19.2), то с OptiFine это так не работает.
+Если OptiFine обнаруживает несовместимую версию игры, в логе появятся следующие строки:
+```log title="Пример лога"
+// highlight-next-line
+> [21:18:40] [main/INFO] [STDERR]: [optifine.OptiFineClassTransformer:getOptiFineResourcePatched:223]: optifine.xdelta.PatchException: truncated source file, aborting
+> [21:18:40] [main/INFO] [STDERR]: [optifine.OptiFineClassTransformer:getOptiFineResourcePatched:223]:  at optifine.xdelta.GDiffPatcher.copy(GDiffPatcher.java:181)
+> [21:18:40] [main/INFO] [STDERR]: [optifine.OptiFineClassTransformer:getOptiFineResourcePatched:223]:  at optifine.xdelta.GDiffPatcher.runPatch(GDiffPatcher.java:130)
+> [21:18:40] [main/INFO] [STDERR]: [optifine.OptiFineClassTransformer:getOptiFineResourcePatched:223]:  at optifine.xdelta.GDiffPatcher.<init>(GDiffPatcher.java:67)
+> [21:18:40] [main/INFO] [STDERR]: [optifine.OptiFineClassTransformer:getOptiFineResourcePatched:223]:  at optifine.xdelta.GDiffPatcher.<init>(GDiffPatcher.java:63)
+```
+Ключевая строчка здесь - `optifine.xdelta.PatchException`. Если видите её в логе - проверьте версию OptiFine.
+
 ## Forge - ошибка мода {#forge-mod-error}
 В конце лога должен быть краш. Он выглядит как череда строчек, начинающихся на `at`:
 ```log title="Пример лога"

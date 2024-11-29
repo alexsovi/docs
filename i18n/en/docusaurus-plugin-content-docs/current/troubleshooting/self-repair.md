@@ -83,6 +83,19 @@ OptiFine is a rather finicky mod that requires specific Forge versions.
 ```
 From the lines `services that failed to load: [OptiFine]` and `Invalid Services found OptiFine`, we can see that the current versions of OptiFine and Forge are incompatible.
 
+## OptiFine - incompatible Minecraft version {#optifine-version}
+OptiFine is tightly bound to a specific game version. While many mods can survive minor updates (for example, mods for 1.19.1 may still work on 1.19.2), this doesn't apply to OptiFine.
+If OptiFine detects an incompatible game version, the following lines will appear in the log:
+```log title="Log example"
+// highlight-next-line
+> [21:18:40] [main/INFO] [STDERR]: [optifine.OptiFineClassTransformer:getOptiFineResourcePatched:223]: optifine.xdelta.PatchException: truncated source file, aborting
+> [21:18:40] [main/INFO] [STDERR]: [optifine.OptiFineClassTransformer:getOptiFineResourcePatched:223]:  at optifine.xdelta.GDiffPatcher.copy(GDiffPatcher.java:181)
+> [21:18:40] [main/INFO] [STDERR]: [optifine.OptiFineClassTransformer:getOptiFineResourcePatched:223]:  at optifine.xdelta.GDiffPatcher.runPatch(GDiffPatcher.java:130)
+> [21:18:40] [main/INFO] [STDERR]: [optifine.OptiFineClassTransformer:getOptiFineResourcePatched:223]:  at optifine.xdelta.GDiffPatcher.<init>(GDiffPatcher.java:67)
+> [21:18:40] [main/INFO] [STDERR]: [optifine.OptiFineClassTransformer:getOptiFineResourcePatched:223]:  at optifine.xdelta.GDiffPatcher.<init>(GDiffPatcher.java:63)
+```
+The key line here is optifine.xdelta.PatchException. If you see this in the log, check the OptiFine version.
+
 ## Forge - mod error {#forge-mod-error}
 There should be a crash at the end of the log. It looks like a series of lines starting with `at`:
 ```log title="Log example"
