@@ -69,6 +69,9 @@ Many servers designed for multiple game versions flood the game with errors by s
 ## Issues with launching the game or crashes during gameplay {#crashes}
 Game crashing? "Something went wrong"? Here's your guide!
 
+### Check connected input devices {#input-devices}
+Some input devices, such as steering wheels, gamepads, joystics may cause Minecraft crashes due to GLFW issues
+
 ### Game broke after installing a specific mod {#known-mod}
 You already know which mod is causing the error, so please contact the mod's author.
 

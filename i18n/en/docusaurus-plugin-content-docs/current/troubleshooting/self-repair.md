@@ -70,6 +70,18 @@ Never attempt to manually delete or replace the problematic dll file! You could 
 You can _try_ to resolve this issue using [this guide](./self-repair)
 :::
 
+## GLFW Input Devices Issue {#input-device-crash}
+Some input devices, such as gamepads, joysticks and steering wheels may cause crashes.
+```log title="Log example"
+// highlight-next-line
+> [14:49:52] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:105]:    Description : Invalid axis in gamepad mapping 03000000790000000600000000000000 (G-Shark GS-GP702)
+> [14:49:52] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:106]:    Stacktrace  :
+>       [14:49:52] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: org.lwjgl.glfw.GLFW.glfwInit(GLFW.java:830)
+>       [14:49:52] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: net.minecraftforge.fml.loading.progress.ClientVisualization.initWindow(ClientVisualization.java:58)
+>       [14:49:52] [main/INFO] [STDERR/]: [org.lwjgl.glfw.GLFWErrorCallback$1:invoke:110]: net.minecraftforge.fml.loading.progress.ClientVisualization.start(ClientVisualization.java:335)
+```
+"Invalid axis in gamepad mapping" may indicate there is a gamepad issue, disconnecting gamepads (joysticks, steerings wheels) will fix the issue.
+
 ## OptiFine - incompatible Forge version {#optifine-incompatible-forge}
 OptiFine is a rather finicky mod that requires specific Forge versions.
 ```log title="Log example"
