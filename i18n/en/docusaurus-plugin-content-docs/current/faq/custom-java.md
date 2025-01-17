@@ -31,7 +31,7 @@ Due to complaints about the stability of Mojang recommended Java builds we have 
     Java versions for these archives are taken from open sources: [Adoptium Temurin](https://adoptium.net/temurin/releases/?package=jre) (Java 8, Java 17) and [AdoptOpenJDK](https://github.com/AdoptOpenJDK/openjdk16-binaries/) (Java 16)
     :::
 2. Open the launcher settings, select "Minecraft" tab and go to Java settings
-    ![Settings => Minecraft => Java => Java => "Customize"](./img/override-jre-ru-0.png).
+    ![Settings => Minecraft => Java => Java => "Customize"](./img/override-jre-0.png).
 3. In the window that opens, select the "Recommended" option
     ![Select "Recommended" Java](./img/override-jre-1.png)
 4. Click "Open Folder"

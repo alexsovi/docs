@@ -1,0 +1,71 @@
+---
+description: Shaderpacks manual
+sidebar_position: 3
+---
+
+# Shaderpacks installation
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+:::note
+Shaderpacks might be referred to as shaders in the following guide.
+:::
+
+1. Install selected [shader mod](./optifine-alternatives.md#shaders) or [OptiFine](../mods/optifine.md). You may need a [modloader](/tags/modloader).
+   :::warning
+   OptiFine is a highly unstable mod. We do not recommend using it with other mods. Try [alternatives](./optifine-alternatives.md#shaders) instead.
+   :::
+2. Run Minecraft
+   :::note
+   This will create a new folder called `shaderpacks` in the Minecraft game directory.
+   :::
+3. Download shaders from websites such as [Modrinth](https://modrinth.com/shaders) or [CurseForge](https://www.curseforge.com/minecraft/search?class=shaders).
+4. Move the downloaded shaders to the new `shaderpacks` folder in the Minecraft game directory.
+   :::info[Opening the Minecraft game directory]
+   1. Click the folder icon in Legacy Launcher.
+      ![Folder icon](./img/folder-button.png)
+   2. Click `Open version-name directory`.
+      ![Open version directory](../mods/img/mods_openclientdir.png)
+   :::
+   :::tip
+   Some shaders mods allows you to "drag" a new shaderpack to `Shader Packs` in-game menu instead.
+   :::
+5. Run Minecraft (if closed) and click `Options`.
+   ![Options](./img/mc-options.png)
+6. Click `Video Settings`.
+   ![Video Settings](./img/vid-settings.png)
+   :::note
+   After installing most shaders mods, there will be a new `Video Settings` layout. This confirms that shaders mod is working.
+   :::
+7. Click the new `Shader Packs` (or `Shaders`) button.
+```mdx-code-block
+   <Tabs>
+   <TabItem value="Iris/Oculus">
+   <img src={require('./img/shaderpacks-button-iris.png').default} alt="Shader Packs button" />
+   </TabItem>
+   <TabItem value="OptiFine">
+   <img src={require('./img/shaderpacks-button-of.png').default} alt="Shaders button" />
+   </TabItem>
+   </Tabs>
+```
+8. Click `Shaders: Disabled` to enable shaders.
+    ![Enable shaders](./img/enable-shaders.png)
+    :::note
+    You may ignore this if shaders are already set to "Enabled" or there is no such option
+    :::
+9. Click the shader you want to enable (in this case `AstraLex Shaders`). Selected shaderpack will be highlited. You may need to click "Apply" to apply selected shaderpack.
+```mdx-code-block
+   <Tabs>
+   <TabItem value="Iris/Oculus">
+   <img src={require('./img/shaders-enabled-iris.png').default} alt="" />
+   </TabItem>
+   <TabItem value="OptiFine">
+   <img src={require('./img/shaders-enabled-of.png').default} alt="" />
+   </TabItem>
+   </Tabs>
+```
+10. Click `Done`.
+    ![Done button](./img/done-iris.png)
+
+You can customize shaderpack settings using "Shader Pack Settings..." or "Shader Options..." button in Shaderpacks menu.
