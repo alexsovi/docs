@@ -69,6 +69,10 @@ Many servers designed for multiple game versions flood the game with errors by s
 ## Issues with launching the game or crashes during gameplay {#crashes}
 Game crashing? "Something went wrong"? Here's your guide!
 
+### Check selected locale {#wrong-locale}
+Many Minecraft versions and mods will crash when Regional Settings are using "uncommon" numerals like Mashriki (`٠, ١, ٢, ٣, ٤, ٥, ٦, ٧, ٨, ٩`). One should change Regional settings to use "common" Arabic symbols.  
+**For Windows users**: Open **Region Settings** in the **Settings** app and go to "Regional Format" (for older Windows versions: Open **Region** settings in **Control Panel**), then change it to an appropriate option. Make sure newly selected option uses the "standart" Arabic numerals (`0, 1, 2, 3, 4, 5, 6, 7, 8, 9`). A reboot may be required.  
+
 ### Check connected input devices {#input-devices}
 Some input devices, such as steering wheels, gamepads, joystics may cause Minecraft crashes due to GLFW issues
 
