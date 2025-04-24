@@ -1,0 +1,13 @@
+build:
+  image: docker
+  services:
+    - name: docker:dind
+      alias: docker
+  script:
+    - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
+    - >
+      docker build
+      --build-arg DOCUSAURUS_URL="$DOCUSAURUS_URL"
+      --build-arg DOCUSAURUS_REDIR="$DOCUSAURUS_REDIR"
+      -t $CI_REGISTRY_IMAGE:latest .
+    - docker push $CI_REGISTRY_IMAGE:latest
