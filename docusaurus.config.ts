@@ -19,6 +19,10 @@ const config: Config = {
     locales: ['en', 'ru'],
   },
 
+  customFields: {
+    redirHost: process.env.DOCUSAURUS_REDIR ?? 'llaun.ch',
+  },
+
   presets: [
     [
       '@docusaurus/preset-classic',

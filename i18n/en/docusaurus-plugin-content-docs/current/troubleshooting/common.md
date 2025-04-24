@@ -32,7 +32,7 @@ This is a known issue that we’ve been working to resolve for a while. It usual
 Try [this guide](./slow-launch.md) or use a VPN.
 
 ### I Can't Launch the Launcher Without Internet! {#no-internet}
-Please save the diagnostic report — [this guide](../support/launcher.md) might help you, and you can send it to us later.  
+Please save the diagnostic report — [this guide](../support/launcher) might help you, and you can send it to us later.  
 Additionally, completely disconnecting from the internet (unplugging the cable or disabling Wi-Fi) might help.
 
 ### I Can't Install New versions! {#no-versions}
