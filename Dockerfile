@@ -10,7 +10,14 @@ WORKDIR /opt/docusaurus
 FROM base AS prod
 WORKDIR /opt/docusaurus
 COPY . /opt/docusaurus/
+
 RUN npm ci
+
+ARG DOCUSAURUS_URL=https://docs.llaun.ch
+ARG DOCUSAURUS_REDIR=llaun.ch
+ENV DOCUSAURUS_URL=${DOCUSAURUS_URL}
+ENV DOCUSAURUS_REDIR=${DOCUSAURUS_REDIR}
+
 RUN npm run build
 
 FROM prod AS serve

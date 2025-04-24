@@ -6,7 +6,7 @@ const config: Config = {
   title: 'Legacy Launcher Wiki',
   tagline: 'Документация Legacy Launcher',
   favicon: 'img/favicon.ico',
-  url: 'https://docs.llaun.ch',
+  url: process.env.DOCUSAURUS_URL ?? 'https://docs.llaun.ch',
   baseUrl: '/',
   organizationName: 'LegacyLauncher',
   projectName: 'docs',
@@ -71,7 +71,7 @@ const config: Config = {
           items: [
             {
               label: 'Наш сайт',
-              href: 'https://llaun.ch',
+              href: `https://${process.env.DOCUSAURUS_REDIR ?? 'llaun.ch'}`,
             },
             {
               label: 'Исходные коды Вики',
@@ -84,11 +84,11 @@ const config: Config = {
           items: [
             {
               label: 'Группа ВК',
-              href: 'https://llaun.ch/vk',
+              href: `https://${process.env.DOCUSAURUS_REDIR ?? 'llaun.ch'}/vk`,
             },
             {
               label: 'Наш Discord',
-              href: 'https://llaun.ch/discord',
+              href: `https://${process.env.DOCUSAURUS_REDIR ?? 'llaun.ch'}/discord`,
             },
           ],
         },
