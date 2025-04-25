@@ -6,7 +6,7 @@ Mojang has released [a version of Minecraft for Chrome OS](https://play.google.c
 :::
 
 :::warning[Please note!]
-Before you start, ensure that your device can [run Linux applications](https://sites.google.com/a/chromium.org/dev/chromium-os/chrome-os-systems-supporting-linux). Typically, this includes computers running on Chrome OS Flex, or Chromebook devices released in 2019 or later. If your Chromebook is owned by an organization (such as a school or university), its administrator may have disabled this functionality.
+Before you start, ensure that your device can [run Linux applications](https://www.chromium.org/chromium-os/chrome-os-systems-supporting-linux/). Typically, this includes computers running on Chrome OS Flex, or Chromebook devices released in 2019 or later. If your Chromebook is owned by an organization (such as a school or university), its administrator may have disabled this functionality.
 :::
 
 In this article, we will try to show how you can run Legacy Launcher for Minecraft: Java Edition on supported Chrome OS devices.
