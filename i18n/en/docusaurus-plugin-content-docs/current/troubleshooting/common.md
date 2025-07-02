@@ -37,7 +37,6 @@ Additionally, completely disconnecting from the internet (unplugging the cable o
 
 ### I Can't Install New versions! {#no-versions}
 Check launcher preferences and make sure the "Remote from server" checkbox is **enabled** and "Installed only" is **disabled**
-Убедитесь, что в настройках лаунчера **включена** галочка "Загружать с сервера" и отключена галочка "Только установленные"
 
 ## Issues with entering the world or servers {#no-crashes}
 The game doesn't crash but shows an error when trying to enter a server or single-player world?
@@ -130,6 +129,7 @@ You might have installed incompatible mods. Common incompatible combinations inc
 * Common conflict sources include MorePlayerModels, CustomNPCs, EpicFight mods.
 
 ### Check for known broken mods {#broken-mods}
+* Remove ["visuals" and familiar mods](/mods/specific/visuals)
 * Most cheats, hacks, cracks, and other modifications, **especially** those requiring `-noverify`, will crash frequently. Avoid them!
 * OptiFabric breaks compatibility with many mods. Do not use it.
 * MemoryLeakFix and NotEnoughCrashes may break after Fabric updates.

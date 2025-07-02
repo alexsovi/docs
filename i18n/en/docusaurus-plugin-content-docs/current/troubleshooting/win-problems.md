@@ -37,12 +37,8 @@ The launcher adds a set of Java settings designed for smoother and more stable g
     In newer launcher versions, you can try a different set of optimized arguments instead of completely disabling them.
     :::
 
-## Remove Unstable Mods {#remove-bad-mods}
-The following mods are known to frequently cause Java crashes. Removing them usually resolves the issue:
-* Mods by topka
-* Mods by sacura
-* Mods by darkness
-* Mods by xorek
+## Remove "visuals" and familiar mods {#remove-bad-mods}
+Remove ["visuals" and familiar mods](/mods/specific/visuals)
 
 ## Remove Graphics Mods {#remove-graphics-mods}
 Certain graphics card drivers have been observed to work poorly with optimization mods. An alternative might be a [driver rollback](#gpu-driver). The following mods may cause crashes due to driver bugs:
